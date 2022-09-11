@@ -10,5 +10,8 @@
 
 def abbrev_name(name):
     name = name.upper().split(" ")
+    # return '.'.join(w[0] for w in name.split()).upper()
+    # first, last = name.upper().split(' ')
+    # return first[0] + '.' + last[0]
     return name[0][0] + "." + name[1][0]
 
