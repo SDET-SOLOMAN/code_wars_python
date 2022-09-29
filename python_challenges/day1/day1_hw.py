@@ -33,13 +33,17 @@ nums = 34560
 my_odds = []
 my_evens = []
 
-for num in str(nums):
-    if int(num) % 2 == 0:
-        my_evens.append(num)
+while nums > 0:
+    if (nums % 10) % 2 != 0:
+        my_odds.append(nums % 10)
     else:
-        my_odds.append(num)
+        my_evens.append(nums % 10)
+    nums //= 10
+
 print(my_evens)
 print(my_odds)
+
+nums = 34560
 
 print(list(filter(lambda x: int(x) % 2 == 0, str(nums))))
 print(list(filter(lambda x: int(x) % 2 != 0, str(nums))))
