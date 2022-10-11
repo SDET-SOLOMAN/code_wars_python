@@ -15,17 +15,14 @@ a = a - b
 b = a - b
 print(a, b)
 
-
-
 # When User enters a number, its factorial is displayed. 5!
 
 my_factorial = 1
 
-for num in range(1, 5+1):
+for num in range(1, 5 + 1):
     my_factorial *= num
 print(my_factorial)
 print(factorial(5))
-
 
 # Our code generates a random three-digit number and has to sum up all its digits.
 # For example, if a number is 349, the code has to print the number 16, because 3 + 4 + 9 = 16.

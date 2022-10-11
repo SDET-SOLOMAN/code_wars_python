@@ -27,6 +27,22 @@
 # or max()
 
 # Count odd and even numbers.  Count odd and even digits of the whole number. E.g,
+
+def count_even_odd(num):
+    odds = 0
+    evens = 0
+    if type(num) != int:
+        raise ValueError
+    while num > 0:
+        if (num % 10) % 2 == 0:
+            evens += 1
+        else:
+            odds += 1
+        num = num // 10
+    return f"odd count is {odds} and even count is {evens}"
+
+print(count_even_odd(12345))
+
 # if entered number 34560, then 3 digits will be even (4, 6, and 0)  and  2 odd digits (3 and 5).
 
 nums = 34560
