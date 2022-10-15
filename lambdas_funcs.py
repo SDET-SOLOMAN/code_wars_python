@@ -69,6 +69,7 @@ def move(position=3, roll=6):
 # solution 2 using lambdas
 move_two = lambda p, r: p + r * 2
 
+
 # --------------------
 
 
@@ -85,3 +86,37 @@ def no_space2(x):
 
 
 no_space3 = lambda x: ''.join(x.split())
+
+
+# ---------------
+
+def move_zeros(lst):
+    zero_count = lst.count(0)
+    lst = [x for x in lst if x > 0]
+    for n in range(zero_count):
+        lst.append(0)
+    return lst
+
+
+# vs
+
+
+def move_zeros2(lst):
+    new = filter(lambda x: x != 0, lst)
+    new_2 = filter(lambda x: x == 0, lst)
+    return list(new) + list(new_2)
+
+
+# --------------------
+
+def friend(x):
+    return [char for char in x if len(char) == 4]
+
+
+# vs
+
+def friend2(x):
+    return filter(lambda name: len(name) == 4, x)
+
+
+# ---------
