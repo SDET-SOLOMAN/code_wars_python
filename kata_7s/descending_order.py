@@ -10,3 +10,7 @@ def descending_order(num):
 def descending_order2(num):
     num = int(''.join(sorted([x for x in str(num)], reverse=True)))
     return num
+
+
+def descending_order3(num):
+    return int(''.join(str(x) for x in sorted([int(s) for s in str(num)], reverse=True)))

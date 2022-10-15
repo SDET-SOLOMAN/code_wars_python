@@ -19,3 +19,4 @@ def square_digits2(num):
         my_sol += str(int(nums) ** 2)
     return int(my_sol)
 
+

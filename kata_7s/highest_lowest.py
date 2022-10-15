@@ -25,3 +25,6 @@ def high_and_low2(numbers):
             my_min = num
 
     return str(my_max) + " " + str(my_min)
+
+
+print(sorted("bitcoin take over the world maybe who knows perhaps".split(), key=len))
