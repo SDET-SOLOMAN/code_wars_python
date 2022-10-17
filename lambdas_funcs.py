@@ -120,3 +120,22 @@ def friend2(x):
 
 
 # ---------
+
+
+to_acronym3 = lambda word: "".join(list(map(lambda x: x[0].upper(), word.split())))
+
+
+# vs
+
+def to_acronym(inp):
+    my_words = ''
+    for char in inp.split():
+        my_words += char[0]
+    return my_words.upper()
+
+
+def to_acronym2(input):
+    # only call upper() once
+    return ''.join(word[0] for word in input.split()).upper()
+
+# -------------------
