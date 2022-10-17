@@ -138,4 +138,30 @@ def to_acronym2(input):
     # only call upper() once
     return ''.join(word[0] for word in input.split()).upper()
 
+
 # -------------------
+
+
+def sum_no_duplicates2(l):
+    return sum([x for x in l if l.count(x) == 1])
+
+
+# vs
+
+def sum_no_duplicates3(l):
+    return sum(filter(lambda x: l.count(x) == 1, l))
+
+
+# ---------------------------
+
+
+def explode(s):
+    return ''.join([str(x) * int(x) for x in s])
+
+
+# vs
+
+def explode2(s):
+    return ''.join(map(lambda x: str(x) * int(x), s))
+
+# -----------------

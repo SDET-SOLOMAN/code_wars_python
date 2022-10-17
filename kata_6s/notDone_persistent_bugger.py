@@ -6,3 +6,18 @@
 # 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
 # 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
 # 4 --> 0 (because 4 is already a one-digit number)
+
+
+def persistence(n):
+    counter = 0
+    if n  < 10:
+        return 0
+    while n >= 10:
+        nums = 1
+        for num in str(n):
+            nums *= int(num)
+        n = nums
+        counter += 1
+    return counter
+
+print(persistence(39))
