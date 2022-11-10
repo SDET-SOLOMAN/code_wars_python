@@ -53,3 +53,9 @@ def duplicate_encode3(word):
             my_dict[char] = '('
 
     return ''.join(my_dict[char] for char in word)
+
+
+
+def duplicate_encode4(word):
+    word = word.lower()
+    return ''.join(["(" if word.count(x) == 1 else ")" for x in word])

@@ -16,8 +16,12 @@ def maskify(cc):
     return cc
 
 
-def maskify(cc):
+def maskify2(cc):
     new_item = ""
     for char in cc[:-4]:
         new_item += '#'
     return new_item + cc[-4:]
+
+
+def maskify3(cc):
+    return ''.join('#' for x in cc[4:]) + cc[:4]

@@ -164,4 +164,17 @@ def explode(s):
 def explode2(s):
     return ''.join(map(lambda x: str(x) * int(x), s))
 
+
 # -----------------
+
+
+def divisible_by(numbers, divisor):
+    return list(filter(lambda x: x % divisor == 0, numbers))
+
+
+# vs
+
+def divisible_by(numbers, divisor):
+    return [x for x in numbers if x % divisor == 0]
+
+# ---------------------------------------
