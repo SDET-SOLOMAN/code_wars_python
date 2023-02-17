@@ -22,3 +22,19 @@ def maskify(cc):
     for char in cc[:-4]:
         new_item += '#'
     return new_item + cc[-4:]
+
+
+def maskify2(cc):
+    if len(cc) <= 4:
+        return cc
+    return ''.join('#' for x in cc[:-4]) + str(cc[-4:])
+
+
+def maskify3(cc):
+    c = len(cc)
+    if c <= 4:
+        return cc
+    new_cc = ""
+    for char in range(0, c - 4):
+        new_cc += '#'
+    return new_cc + cc[-4::1]

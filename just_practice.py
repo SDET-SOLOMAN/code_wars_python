@@ -1,1 +1,0 @@
-# Ascend, Descend, Repeat

@@ -36,4 +36,22 @@ def dig4(n):
     return [int(x) for x in reverser_str(n)]
 
 
-print(dig4(987654321))
+def digitize(n):
+    a = [int(x) for x in str(n)]
+    a.reverse()
+    return a
+
+
+def digitize(n):
+    a = list(map(lambda x: int(x), str(n)))
+    a.reverse()
+    return a
+
+
+def digitize(n):
+    nn = -1
+    x = []
+    while nn >= -len(str(n)):
+        x.append(int(str(n)[nn]))
+        nn -= 1
+    return x
