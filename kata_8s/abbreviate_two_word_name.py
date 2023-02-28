@@ -15,3 +15,18 @@ def abbrev_name(name):
     # return first[0] + '.' + last[0]
     return name[0][0] + "." + name[1][0]
 
+
+def abbrev_name2(name):
+    name = name.split()
+    new_name = ''.join([x[0].upper() + "." for x in name])
+    return new_name[:-1]
+
+
+def abbrev_name3(name):
+    name = name.upper().split()
+    new_name = ''.join(x[0] + '.' for x in name)
+    return new_name[:-1]
+
+
+def abbrev_name4(name):
+    return ''.join(x[0] + "." for x in name.upper().split())[:-1]

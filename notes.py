@@ -1,5 +1,6 @@
 ####### Signs ---------------------------------------
 
+# chr() for char
 # != not equal to
 # and
 # or
@@ -65,14 +66,14 @@
 # .items() return key:value in tuple
 # dict(zip())
 # cat = dict(name="James", age=35, iscute=True) --> creating dict
-# cat = {}.fromkeys(['name', 'age', 'iscute']) --> None
+# cat = {}.fromkeys(['name', 'age', 'iscute'], None) --> None
 # name = "jack"
 # cat[name]
 # .clear()
-# .copy() --> makes a copy of dict
+# new_dict = old_dict.copy() --> makes a copy of dict
 # pop() --> doesnt delete last one if left empty, pop(should have key in it)
 # popitem() at random
-# update() <- adding more keys and values
+# my_dict.update(dict2) <- taking k,v from a dict and adding to another dict
 # get() or in
 # 'nam' in dict.values()
 # --------------
@@ -115,14 +116,25 @@ for k, v in enumerate(my_tuple):
 # list_of_cities = ['LA', "LA", "NY","NY","DC"] <- len(set(list_of_cities)) unique values
 # .add(6)
 # .remove(6) <- shows error if its missing
-# . discard(6) is better
+# . discard(6) is better, doesnt throw an error
 # .copy()
 # .clear()
 # set1.issubest(set2)
 # .issuperset()
+
 # .intersection()
+math_course = {'Math', 'James', 'Santa', 'Jake'}
+bio_course = {'Math', 'er', 'Santa', 'tr'}
+print(math_course & bio_course)
+
 # .difference()
 # frozenset({})
+
+#union
+math_course = {'Math', 'James', 'Santa', 'Jake'}
+bio_course = {'Math', 'er', 'Santa', 'tr'}
+print(math_course | bio_course)
+
 # | <- combining sets together with all unique students
 # & <- students who are in both courses
 

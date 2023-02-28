@@ -17,3 +17,11 @@ def get_count(sentence):
 def get_count2(sentence):
     my_count = [x for x in sentence if x in 'aeiou']
     return len(my_count)
+
+
+def get_count3(sentence):
+    return len(list(filter(lambda x: x in 'aeiou', sentence)))
+
+
+def get_count4(sentence):
+    return sum(1 for x in sentence if x in 'aeiou')

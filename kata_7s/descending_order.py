@@ -14,3 +14,8 @@ def descending_order2(num):
 
 def descending_order3(num):
     return int(''.join(str(x) for x in sorted([int(s) for s in str(num)], reverse=True)))
+
+
+def descending_order4(num):
+    a = sorted([int(x) for x in str(num)], reverse=True)
+    return int(''.join(str(x) for x in a))

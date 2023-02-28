@@ -55,3 +55,19 @@ def digitize(n):
         x.append(int(str(n)[nn]))
         nn -= 1
     return x
+
+
+# without str convertion:
+
+def digitize(n):
+    my_list = []
+    while n > 10:
+        my_list.append(n % 10)  # takes the last number
+        n = n // 10  # takes the all the numbers besides the last one
+    my_list.append(n)
+    new_list = []
+    index = -1
+    while index > - len(my_list):
+        new_list.append(my_list[index])
+        index -= 1
+    return new_list

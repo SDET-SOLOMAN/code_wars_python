@@ -22,6 +22,6 @@ answer2 = [x[::-1].lower() for x in ["Elie", "Tim", "Matt"]]
 
 # Nested lists
 #[[0, 1, 2], [0, 1, 2], [0, 1, 2]]
-print([['x' if x % 2 == 0 else "O" for x in range(0, 3)] for x in range(0,3)])
+print([['x' if x % 2 == 0 else "O" for x in range(0, 3)] for s in range(0,3)])
 
-print([["*" for x in range(0,3)] for x in range(0, 3)])
+print([["*" for x in range(0,3)] for s in range(0, 3)])

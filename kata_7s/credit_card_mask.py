@@ -25,3 +25,6 @@ def maskify2(cc):
 
 def maskify3(cc):
     return ''.join('#' for x in cc[4:]) + cc[:4]
+
+def maskify(cc):
+    return ''.join(list(map(lambda x: "#", cc[:-4]))) + cc[-4:]

@@ -29,3 +29,17 @@ list2 = ["California", "New Jersey", "Rhode Island"]
 
 answer = {list1[i]: list2[i] for i in range(0, 3)}
 dict(zip(list1,list2))
+
+# ------
+
+person = [["name", "Jared"], ["job", "Musician"], ["city", "Bern"]]
+answer = {thing[0]: thing[1] for thing in person}
+answer = {k:v for k,v in person}
+answer = dict(person)
+
+# -------
+answer = {char:0 for char in 'aeiou'}
+answer = dict.fromkeys("aeiou", 0)
+
+# -------
+answer = {x:chr(x) for x in range(65, 91)}

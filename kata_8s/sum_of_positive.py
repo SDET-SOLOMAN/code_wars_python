@@ -9,4 +9,4 @@ def positive_sum(arr):
 
 
 def positive_sum2(arr):
-    return sum(filter(lambda x: x > 0,arr))
+    return sum(filter(lambda x: x > 0, arr))
