@@ -27,4 +27,24 @@ def high_and_low2(numbers):
     return str(my_max) + " " + str(my_min)
 
 
+def high_and_low3(num):
+    nums = sorted([int(s) for s in num.split()], reverse=True)
+    return str(nums[0]) + " " + str(nums[-1])
+
+
+def high_and_low4(numbers):
+    numbers = [int(x) for x in numbers.split()]
+    return str(max(numbers)) + " " + str(min(numbers))
+
+
+def high_and_low5(numbers):
+    numbers = sorted(list(map(lambda x: int(x), numbers.split())))
+    return f"{numbers[-1]} {numbers[0]}"
+
+
+def high_and_low6(numbers):
+    my_list = sorted([int(x) for x in numbers.split()], reverse=True)
+    return f"{my_list[0]} {my_list[-1]}"
+
+
 print(sorted("bitcoin take over the world maybe who knows perhaps".split(), key=len))

@@ -32,7 +32,7 @@
 
 ####### Functions -----------------------------------
 
-# round(2,2) or f"{num:.2f}"
+# round(2,2) or f"{num.:2f}"
 # ranges(0,10) - up to 10, range(0:10:2) step size
 # length +1
 # count(3) how many times 3 in shows up

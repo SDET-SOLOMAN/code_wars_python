@@ -12,3 +12,10 @@ def accum(s):
         new_string += "-"
         count += 1
     return new_string[:-1]
+
+
+def accum2(s):
+    new_text = ""
+    for num in range(0, len(s)):
+        new_text += s[num].upper() + s[num].lower() * num + "-"
+    return new_text[:-1]

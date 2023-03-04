@@ -10,5 +10,11 @@ def find_short(s):
 
     return len(min_word)
 
+
 def find_short2(s):
     return min(len(char) for char in s.split())
+
+
+char = "ivjrivjrijv"
+
+print(isinstance())

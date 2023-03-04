@@ -1,1 +1,1 @@
-# stopped at kata 7 descending order
+# stopped at kata 8 reversed string - didnt finish
