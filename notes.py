@@ -1,5 +1,18 @@
 ####### Signs ---------------------------------------
 
+
+# all / any
+
+def is_all_strings(lst):
+    return all(type(l) == str for l in lst)
+
+
+
+
+def nearest_sq(n):
+    rounded_square = round(n ** (1/2))
+    return rounded_square ** 2
+
 # chr() for char
 # != not equal to
 # and
@@ -94,6 +107,30 @@
 # answer = {k:v for k,v in person}
 # answer = dict(person)
 
+# def return_day(num):
+#
+#     my_dict = {
+#         1: "Sunday",
+#         2: "Monday",
+#         3: "Tuesday",
+#         4: "Wednesday",
+#         5: "Thursday",
+#         6:  "Friday",
+#         7: "Saturday"
+#     }
+#
+#     try:
+#         return my_dict[num]
+#     except KeyError:
+#         return None
+
+# '''
+# multiple_letter_count("awesome") # {'a': 1, 'e': 2, 'm': 1, 'o': 1, 's': 1, 'w': 1}
+# '''
+#
+# # flesh out multiple_letter count:
+# def multiple_letter_count(stri):
+#     return {x: stri.count(x) for x in stri}
 
 
 
@@ -116,11 +153,15 @@ for k, v in enumerate(my_tuple):
 # list_of_cities = ['LA', "LA", "NY","NY","DC"] <- len(set(list_of_cities)) unique values
 # .add(6)
 # .remove(6) <- shows error if its missing
-# . discard(6) is better, doesnt throw an error
+# . discard(6) is better, doesn't throw an error
 # .copy()
 # .clear()
 # set1.issubest(set2)
 # .issuperset()
+
+# def intersection(list1, list2):
+#     return [val for val in set(list1) & set(list2)]
+
 
 # .intersection()
 math_course = {'Math', 'James', 'Santa', 'Jake'}
@@ -171,3 +212,16 @@ print(tuple(filter(lambda x: isinstance(x, int), my_tuple)))
 list_1 = ['Hi', 'ananas', 2, None, 75, 'pizza', 36, 100]
 print(sum(filter(lambda x: isinstance(x, int), list_1)))
 print(sum([x for x in list_1 if type(x) == int]))
+
+
+# ZIP
+
+mids = [80, 91, 78]
+finals = [98, 89, 53]
+names = ['huy', 'duy', 'lui']
+
+print(dict(zip(names, [mids[i] if mids[i] > finals[i] else finals[i] for i in range(len(names))])))
+# or
+print(dict(zip(names, (max(x) for x in zip(mids, finals)))))
+# or
+print({x[0] : max(x[1], x[2]) for x in zip(names, finals, mids)})
