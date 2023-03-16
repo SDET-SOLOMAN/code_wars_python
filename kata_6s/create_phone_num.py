@@ -12,3 +12,8 @@ def create_phone_number(n):
     middle = ''.join(str(x) for x in n[3:6])
     last = ''.join(str(x) for x in n[6:])
     return f"({first_nums}) {middle}-{last}"
+
+
+def create_phone_number2(n):
+    m = ''.join(map(str, n))
+    return f"({m[:3]}) {m[3:6]}-{m[6:]}"

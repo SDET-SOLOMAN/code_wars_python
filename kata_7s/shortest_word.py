@@ -15,6 +15,5 @@ def find_short2(s):
     return min(len(char) for char in s.split())
 
 
-char = "ivjrivjrijv"
-
-print(isinstance())
+def find_short3(s):
+    return len(sorted(s.split(), key=len)[0])

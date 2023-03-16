@@ -13,3 +13,11 @@ def solution(a, b):
     if len(a) > len(b):
         return b + a + b
     return a + b + a
+
+
+def solution2(a, b):
+    first = sorted([a, b], key=len, reverse=True)[0]
+    second = sorted([a, b], key=len, reverse=True)[1]
+
+    return second + first + second
+

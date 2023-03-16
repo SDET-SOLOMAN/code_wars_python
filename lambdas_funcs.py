@@ -178,3 +178,7 @@ def divisible_by(numbers, divisor):
     return [x for x in numbers if x % divisor == 0]
 
 # ---------------------------------------
+
+
+def maps(a):
+    return map(lambda x:2*x, a)

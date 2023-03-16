@@ -19,3 +19,9 @@ def accum2(s):
     for num in range(0, len(s)):
         new_text += s[num].upper() + s[num].lower() * num + "-"
     return new_text[:-1]
+
+
+# using comprehension
+def accum3(s):
+    return "".join([s[x].upper() + s[x].lower() * x + "-"
+                   for x in range(0, len(s))])[:-1]

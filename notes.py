@@ -156,28 +156,15 @@ for k, v in enumerate(my_tuple):
 # . discard(6) is better, doesn't throw an error
 # .copy()
 # .clear()
-# set1.issubest(set2)
-# .issuperset()
 
 # def intersection(list1, list2):
 #     return [val for val in set(list1) & set(list2)]
 
+# .difference() <- Set1(set2)
 
-# .intersection()
-math_course = {'Math', 'James', 'Santa', 'Jake'}
-bio_course = {'Math', 'er', 'Santa', 'tr'}
-print(math_course & bio_course)
+# .union() <- total friends set1.umion(set2)
 
-# .difference()
-# frozenset({})
-
-#union
-math_course = {'Math', 'James', 'Santa', 'Jake'}
-bio_course = {'Math', 'er', 'Santa', 'tr'}
-print(math_course | bio_course)
-
-# | <- combining sets together with all unique students
-# & <- students who are in both courses
+# intersection() <- if friends go to same course
 
 
 

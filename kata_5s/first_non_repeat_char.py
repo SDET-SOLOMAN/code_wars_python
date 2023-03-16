@@ -17,3 +17,25 @@ def first_non_repeating_letter(string):
     if len(word) >= 1:
         return word[0]
     return ''
+
+
+# nott using count
+
+def first_non_repeating_letter2(string):
+    my_dict = {
+
+    }
+
+    str1 = string.lower()
+
+    for char in str1:
+        if my_dict.get(char):
+            my_dict[char] += 1
+        else:
+            my_dict[char] = 1
+    print(my_dict)
+
+    for char in string:
+        if my_dict[char.lower()] == 1:
+            return char
+    return ""

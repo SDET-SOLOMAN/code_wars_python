@@ -13,3 +13,21 @@
 
 def find_it(seq):
     return [x for x in seq if seq.count(x) % 2 != 0][0]
+
+
+def find_it2(seq):
+    my_dict = {
+
+    }
+
+    for num in seq:
+        if my_dict.get(num):
+            my_dict[num] += 1
+        else:
+            my_dict[num] = 1
+    print(my_dict)
+
+    for k, v in my_dict.items():
+        if v % 2 != 0:
+            return int(k)
+

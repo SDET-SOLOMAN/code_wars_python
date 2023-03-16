@@ -8,3 +8,7 @@ def maps(a):
 
 def maps2(a):
     return list(map(lambda x: x * 2, a))
+
+
+def maps3(a):
+    return map(lambda x:2*x, a)

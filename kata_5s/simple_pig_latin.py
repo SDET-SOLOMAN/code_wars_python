@@ -26,3 +26,10 @@ def pig_it(text):
 def pig_it2(text):
     text = text.split()
     return ' '.join([word[1:] + word[:1] + 'ay' if word.isalpha() else word for word in text])
+
+
+def pig_it3(text):
+    return ' '.join([x[1:] + x[0] + 'ay' if x.isalpha() else x for x in text.split()])
+
+def pig_it4(text):
+    return ' '.join(map(lambda x: x[1:] + x[0] + 'ay' if x.isalpha() else x, text.split()))
