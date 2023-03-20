@@ -177,8 +177,22 @@ def divisible_by(numbers, divisor):
 def divisible_by(numbers, divisor):
     return [x for x in numbers if x % divisor == 0]
 
+
 # ---------------------------------------
 
 
 def maps(a):
-    return map(lambda x:2*x, a)
+    return map(lambda x: 2 * x, a)
+
+
+# ---------------------
+print((lambda x, y: x + y)(5, 7))
+
+
+# ---------
+
+def my_func(l):
+    return l * 2
+
+
+print(maps(my_func, [1, 5, 9, 20, 9, 2]))
