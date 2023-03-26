@@ -50,3 +50,30 @@ def zero_plentiful(arr):
     if zero_seq < 1:
         return 0
     return zero_seq
+
+
+def zero_plentiful2(arr):
+    zero_count = 0
+    yes = 0
+    index = 0
+    print(arr)
+    for char in arr:
+
+        if char == 0:
+
+            zero_count += 1
+
+            if zero_count == 4:
+                yes += 1
+
+            if zero_count < 4 and index == len(arr) - 1:
+                return 0
+
+        elif char != 0:
+
+            if zero_count >= 1 and zero_count < 4:
+                return 0
+            elif zero_count >= 4:
+                zero_count = 0
+        index += 1
+    return yes

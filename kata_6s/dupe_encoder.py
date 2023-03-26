@@ -55,7 +55,26 @@ def duplicate_encode3(word):
     return ''.join(my_dict[char] for char in word)
 
 
-
 def duplicate_encode4(word):
     word = word.lower()
     return ''.join(["(" if word.count(x) == 1 else ")" for x in word])
+
+
+def duplicate_encode6(word):
+    new_s = ""
+
+    word = word.lower()
+
+    index = 0
+
+    while len(new_s) < len(word):
+
+        if word[index] in word[:index] or word[index] in word[index + 1:]:
+
+            new_s += ")"
+        else:
+            new_s += "("
+
+        index += 1
+
+    return new_s

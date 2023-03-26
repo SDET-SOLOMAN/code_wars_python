@@ -19,6 +19,27 @@ def to_camel_case(text):
         new_s += char.capitalize()
     return new_s
 
+def to_camel_case3(text):
+    if not text:
+        return ""
+    chars = ["_", "-"]
+    text = ''.join(" " if x in chars else x for x in text)
+    text = text.split()
+    new_s = text[0]
+
+    for char in text[1:]:
+        new_s += char.capitalize()
+    return new_s
+
+
+def to_camel_case5(text):
+    if not text:
+        return ""
+    rep1 = text.replace("_", "-")
+    text1 = rep1.split("-")
+    print(text1)
+    return text1[0] + ''.join(x.capitalize() for x in text1[1:] if x.isalpha() and x != '-')
+
 
 import re
 
@@ -33,3 +54,23 @@ def to_camel_case2(text):
             new_word += num[0].upper()
             new_word += num[1:]
     return new_word
+
+# not using replace or split:
+
+def to_camel_case4(text):
+    if not text:
+        return ""
+
+    new_s = ""
+    turn_upper = False
+
+    for char in text:
+        if char.isalpha():
+            if turn_upper:
+                new_s += char.upper()
+                turn_upper = False
+            else:
+                new_s += char
+        else:
+            turn_upper = True
+    return new_s

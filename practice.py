@@ -1,2 +1,3 @@
 # stopped at kyu 7 Switchero
-print((lambda x, y: x + y)(5, 7))
+l = [1, 2, 3, 4, 5]
+print(''.join(str(l[1:3])))

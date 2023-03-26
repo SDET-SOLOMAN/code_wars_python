@@ -44,3 +44,8 @@ def get_strings2(city):
             my_string += "*" * city.lower().count(num.lower())
             my_string += ","
     return my_string[:-1]
+
+
+def get_strings3(city):
+    d = {k: "*" * city.lower().count(k.lower()) for k in city.lower()}
+    return ",".join(f"{k}:{v}" for k, v in d.items() if k != " ")

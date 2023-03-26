@@ -59,3 +59,22 @@ def duplicate_count4(text):
             dupes.add(char)
         seen.add(char)
     return len(dupes)
+
+# using dict
+
+
+def duplicate_count4(text):
+    if not text:
+        return 0
+    t = {
+
+    }
+
+    text = text.lower()
+
+    for char in text:
+        if t.get(char):
+            t[char] += 1
+        else:
+            t[char] = 1
+    return sum([1 if x[1] > 1 else 0 for x in t.items()])
