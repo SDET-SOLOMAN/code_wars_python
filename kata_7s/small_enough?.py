@@ -6,3 +6,9 @@
 
 def small_enough(array, limit):
     return len(list(filter(lambda x: x <= limit, array))) == len(array)
+
+
+# using ALL
+
+def small_enough2(array, limit):
+    return all([x <= limit for x in array])

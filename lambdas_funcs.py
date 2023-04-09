@@ -195,4 +195,17 @@ def my_func(l):
     return l * 2
 
 
-print(maps(my_func, [1, 5, 9, 20, 9, 2]))
+# ________
+
+students = ['kate', 'james', 'mark']
+mid = [80, 99, 88]
+fin = [81, 98, 90]
+
+print({x[0]:(max(x[1], x[2])) for x in zip(students, mid, fin)})
+print(
+    dict(
+        zip(students,
+            map(lambda x: max(x), zip(mid, fin))
+            )
+    )
+)
