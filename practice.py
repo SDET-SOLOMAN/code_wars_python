@@ -1,6 +1,1 @@
-from functools import reduce
-
-a = [1, 2, 3]
-
-print(reduce(lambda x, y: x * y, a, 5))
-
+l = [2, 3, 1, 2, 1, 2, 3, 4, 4, 5, 3, 4, 3].pop(3)

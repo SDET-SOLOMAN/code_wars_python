@@ -40,3 +40,24 @@ def sort_array2(source_array):
         x = answer.index("X")
         answer[x] = i
     return answer
+
+
+def sort_array3(source_array):
+    odds = sorted([x for x in source_array if x % 2 != 0])
+    ind = 0
+    answer = []
+
+    for index, num in enumerate(source_array):
+
+        if num % 2 == 0:
+            answer.append(num)
+        else:
+            answer.append(odds[ind])
+            ind += 1
+
+    return answer
+
+
+def sort_array4(arr):
+    odds = sorted((x for x in arr if x % 2 != 0), reverse=True)
+    return [x if x % 2 == 0 else odds.pop() for x in arr]

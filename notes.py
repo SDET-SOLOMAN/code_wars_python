@@ -156,18 +156,40 @@ for k, v in enumerate(my_tuple):
 # . discard(6) is better, doesn't throw an error
 # .copy()
 # .clear()
+# .pop() pops first num
 
-# def intersection(list1, list2):
-#     return [val for val in set(list1) & set(list2)]
+# frozenset()
 
-# .difference() <- Set1(set2)
+#issubset() ->
+set1 = {1, 3, "James"}
+set2 = {1, 3, "James", 4, 5, 4}
+# if set1 is sub of set2
+print("SETTTTT")
+print(set1.issubset(set2))
 
-# .union() <- total friends set1.umion(set2)
+#issuperset->
+set1 = {1, 3, "James"}
+set2 = {1, 3, "James", 4, 5, 4}
+print(set2.issuperset(set1))
+# if set2 owns set1
 
-# intersection() <- if friends go to same course
+#intersection ->
+set1 = {1, 3, "James"}
+set2 = {1, 3, "James", 4, 5, 4}
+print(set2.intersection(set1))
+# common values
 
+#difference->
+set1 = {1, 3, "James"}
+set2 = {1, 3, "James", 4, 5, 4}
+print(set2.difference(set1))
+# difference values of set2 from set1
 
-
+# symetric_difference->
+set1 = {1, 3, "James", 99}
+set2 = {1, 3, "James", 4, 5, 4}
+print(set2.symmetric_difference(set1))
+# all the differences between sets
 
 ####### ARGS AND KWARGS
 # *args tuple

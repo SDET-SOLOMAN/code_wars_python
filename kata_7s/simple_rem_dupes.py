@@ -31,3 +31,7 @@ def solve2(arr):
             index -= 1
         index += 1
     return arr
+
+
+solve3 = lambda arr: [num for index, num in enumerate(arr)
+                     if num not in arr[index + 1:]]

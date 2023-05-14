@@ -12,3 +12,6 @@ def small_enough(array, limit):
 
 def small_enough2(array, limit):
     return all([x <= limit for x in array])
+
+
+small_enough3 = lambda arr, num: all([x <= num for x in arr])
