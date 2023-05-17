@@ -21,3 +21,10 @@ def sc(apple):
             index_2 += 1
         index_1 += 1
         index_2 = 0
+
+
+def sc2(apple):
+    for index_1, row_1 in enumerate(apple):
+        for index_2, row_2 in enumerate(row_1):
+            if row_2.lower() == 'b':
+                return [index_1, index_2]

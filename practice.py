@@ -1,1 +1,6 @@
-l = [2, 3, 1, 2, 1, 2, 3, 4, 4, 5, 3, 4, 3].pop(3)
+def l():
+    print(var + 1)
+
+var = 1
+l()
+print(var)
