@@ -78,3 +78,18 @@ def duplicate_count4(text):
         else:
             t[char] = 1
     return sum([1 if x[1] > 1 else 0 for x in t.items()])
+
+
+from functools import reduce
+
+
+def duplicate_count5(text):
+    text = text.lower()
+
+    k = {
+        k: text.count(k) for k in text
+    }
+
+    new_k = [1 for k, v in k.items() if v > 1]
+
+    return reduce(lambda x, y: x + y, new_k) if new_k else 0

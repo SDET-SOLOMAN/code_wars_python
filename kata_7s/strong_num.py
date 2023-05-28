@@ -26,3 +26,22 @@ def strong_num(number):
         num += num2
 
     return "STRONG!!!!" if num == number else "Not Strong !!"
+
+#not using str()
+def strong_num2(number):
+    temp_number = number
+    num = 0
+
+    while number > 0:
+
+        temp = number % 10
+        temp2 = 1
+
+        for char in range(1, temp + 1):
+            temp2 *= char
+
+        num += temp2
+
+        number //= 10
+
+    return 'STRONG!!!!' if num == temp_number else 'Not Strong !!'

@@ -26,5 +26,18 @@ def maskify2(cc):
 def maskify3(cc):
     return ''.join('#' for x in cc[4:]) + cc[:4]
 
-def maskify(cc):
+def maskify4(cc):
     return ''.join(list(map(lambda x: "#", cc[:-4]))) + cc[-4:]
+
+
+maskify5 = lambda word: ''.join("#" for x in word[:-4]) + word[-4:]
+
+
+# return masked string
+def hash_maker(letter):
+    a = ''.join("#" for x in letter)
+    print(a)
+    return a
+
+def maskify6(cc):
+    return ''.join(map(hash_maker, cc[:-4])) + cc[-4:]

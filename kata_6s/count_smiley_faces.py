@@ -22,7 +22,7 @@
 
 def count_smileys(arr):
     print(arr)
-    smiles = [':D',':~)',';~D',':)', ';-D', ";)", ";D", ':-D' ]
+    smiles = [':D', ':~)', ';~D', ':)', ';-D', ";)", ";D", ':-D']
     return len(list(filter(lambda x: x in smiles, arr)))
 
 
@@ -33,8 +33,13 @@ def count_smileys2(arr):
         if len(num) == 3:
             if num[1] == '~' or num[1] == '-':
                 new_num = num[0] + num[2]
-                if (new_num[0] == ":" or new_num[0] == ";") and (new_num[1] == 'D' or new_num[1]==')'):
+                if (new_num[0] == ":" or new_num[0] == ";") and (new_num[1] == 'D' or new_num[1] == ')'):
                     counting += 1
-        if (num[0] == ":" or num[0] == ";") and (num[1] == 'D' or num[1]==')'):
-                counting += 1
+        if (num[0] == ":" or num[0] == ";") and (num[1] == 'D' or num[1] == ')'):
+            counting += 1
     return counting
+
+
+smiles = [':D', ':~)', ';~D', ':)', ';-D', ";)", ";D", ':-D']
+
+count_smileys3 = lambda faces: len(list(filter(lambda x: x in smiles, faces)))
