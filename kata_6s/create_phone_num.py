@@ -17,3 +17,9 @@ def create_phone_number(n):
 def create_phone_number2(n):
     m = ''.join(map(str, n))
     return f"({m[:3]}) {m[3:6]}-{m[6:]}"
+
+
+def create_phone_number3(n):
+    n = ''.join(str(x) for x in n)
+    n1, n2, n3 = n[:3], n[3:6], n[6:]
+    return f"({n1}) {n2}-{n3}"

@@ -8,6 +8,20 @@
 #
 # Courtesy of projecteuler.net (Problem 1)
 
+from functools import reduce
 
 def solution(number):
     return sum(x for x in range(1, number) if x % 3 == 0 or x % 5 == 0)
+
+solution2 = lambda combo: reduce(lambda x, y: x + y,
+                                [x for x in range(1, combo) if x % 3 == 0 or x % 5 == 0]) if combo > 3 else 0
+
+
+def solution3(number):
+    my_sum = 0
+
+    for num in range(1, number):
+        if num % 3 == 0 or num % 5 == 0:
+            my_sum += num
+
+    return my_sum

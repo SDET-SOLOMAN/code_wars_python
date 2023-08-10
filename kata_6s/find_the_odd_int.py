@@ -10,15 +10,16 @@
 # [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 # [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
+# complex lambda solution
+find_it_lambda = lambda l: [x[0] for x in {k: l.count(k) for k in l}.items() if x[1] % 2 != 0][0]
+
 
 def find_it(seq):
     return [x for x in seq if seq.count(x) % 2 != 0][0]
 
 
 def find_it2(seq):
-    my_dict = {
-
-    }
+    my_dict = {}
 
     for num in seq:
         if my_dict.get(num):
@@ -31,3 +32,9 @@ def find_it2(seq):
         if v % 2 != 0:
             return int(k)
 
+
+def find_it3(seq):
+    d = {
+        k: seq.count(k) for k in seq
+    }
+    return [x[0] for x in d.items() if x[1] % 2 != 0][0]

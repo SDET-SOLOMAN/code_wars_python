@@ -15,3 +15,16 @@ def friend(x):
 
 def friend2(x):
     return filter(lambda name: len(name) == 4, x)
+
+
+def friend3(x):
+    new_ = []
+    for name in x:
+        if len(name) == 4:
+            new_.append(name)
+    return new_
+
+
+friend4 = lambda names: list(filter(lambda x: len(x) == 4, names))
+
+friend5 = lambda names: [name for name in names if len(name) == 4]

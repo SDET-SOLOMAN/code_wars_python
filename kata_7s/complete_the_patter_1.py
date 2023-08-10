@@ -32,3 +32,5 @@ def pattern(n):
 
 def pattern2(n):
     return '\n'.join(str(i) * i for i in range(1, n + 1))
+
+pattern3 = lambda x: '\n'.join(str(s) * s for s in range(1, x + 1))

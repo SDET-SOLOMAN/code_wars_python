@@ -11,3 +11,13 @@
 
 def disemvowel(string_):
     return ''.join([x for x in string_ if x not in 'aubioAEUIO'])
+
+
+def disemvowel2(string_):
+    return ''.join(x for x in string_ if x.lower() not in 'auioe')
+
+
+disemvowel3 = lambda string_: ''.join(x for x in string_ if x.lower() not in 'auioe')
+
+
+disemvowel4 = lambda word: ''.join(filter(lambda x: x.upper() not in "AUIOE", word))

@@ -10,3 +10,30 @@
 
 def spin_words(sentence):
     return ' '.join([x[::-1] if len(x) >= 5 else x for x in sentence.split()])
+
+
+######################################
+rev = lambda x: x[::-1] if len(x) >= 5 else x
+
+
+def spin_words2(sentence):
+    return ' '.join(rev(x) for x in sentence.split())
+
+
+######################################
+
+def rev2(word):
+    new_word = ''
+    l = len(word)
+    if l >= 5:
+        for char in range(l - 1, -1, -1):
+            new_word += word[char]
+        return new_word
+    return word
+
+
+def spin_words3(sentence):
+    return ' '.join(rev2(x) for x in sentence.split())
+
+
+spin_words4 = lambda sentence: ' '.join(map(lambda x: rev2(x), sentence.split()))

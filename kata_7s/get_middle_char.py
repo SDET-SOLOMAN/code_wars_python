@@ -12,7 +12,13 @@
 #
 # Kata.getMiddle("A") should return "A"
 
-def get_middle(s):
-    if len(s) % 2 == 0:
-        return ''.join(x for x in s[len(s)//2 - 1:len(s)//2 + 1])
-    return ''.join(x for x in s[len(s)//2]) 
+get_middle = lambda word: ''.join(x for x in word[(len(word) // 2) - 1:
+                                                  (len(word) // 2 + 1)]) if len(word) % 2 == 0 else \
+                                                    word[(len(word) // 2)]
+
+
+def get_middle2(s):
+    len_s = len(s)
+    middle = len(s) // 2
+
+    return s[middle - 1] + s[middle] if len_s % 2 == 0 else s[middle]
