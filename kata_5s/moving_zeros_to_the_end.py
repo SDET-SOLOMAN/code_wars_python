@@ -27,3 +27,27 @@ def move_zeros3(lst):
             second_num.append(0)
     new_num.extend(second_num)
     return new_num
+
+
+def move_zeros4(lst):
+    return [x for x in lst if x > 0] + ([0] * lst.count(0))
+
+
+def move_zeros5(lst):
+    lst_2 = list(filter(lambda x: x > 0, lst))
+    while len(lst_2) < len(lst):
+        lst_2.append(0)
+    return lst_2
+
+
+def move_zeros6(lst):
+    for char in lst:
+        if char == 0:
+            lst.pop(lst.index(0))
+            lst.append(0)
+    return lst
+
+
+move_zeros7 = lambda lst: sorted(lst, key=lambda x: x == 0)
+
+move_zeros8 = lambda x: [num for num in x if num != 0] + [zero for zero in x if zero == 0]
