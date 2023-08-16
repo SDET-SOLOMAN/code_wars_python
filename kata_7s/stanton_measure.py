@@ -29,3 +29,26 @@ def stanton_measure2(arr):
             my_return_count += 1
 
     return my_return_count
+
+
+# using reduce
+
+from functools import reduce
+
+
+def stanton_measure3(arr):
+    one = [1 for x in arr if x == 1]
+    one_count = reduce(lambda x, y: x + y, one) if one else 0
+    second = list(filter(lambda x: x == one_count, arr))
+    return sum(1 for x in second if x == one_count)
+
+
+def stanton_measure4(arr):
+    first = len([1 for x in arr if x == 1])
+    return len([1 for x in arr if x == first])
+
+
+# one line
+stanton_measure5 = lambda arr: len([1 for x in arr if x == len([1 for x in arr if x == 1])])
+
+

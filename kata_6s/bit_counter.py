@@ -18,3 +18,19 @@ def count_bits(char):
 
 def countBits2(n):
     return bin(n).count("1")
+
+
+def count_bits3(n):
+    new = ''
+    while n > 0:
+        new += str(n % 2)
+        n //= 2
+    return new.count('1')
+
+
+def count_bits4(n):
+    s = 0
+    while n > 0:
+        if n % 2 != 0: s += 1
+        n //= 2
+    return s

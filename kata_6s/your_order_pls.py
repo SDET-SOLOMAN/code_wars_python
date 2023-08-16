@@ -20,3 +20,6 @@ def order(sentence):
                 sentence_ += " "
         index += 1
     return sentence_[:-1]
+
+
+order2 = lambda words: ' '.join(sorted(words.split(), key=min))

@@ -30,3 +30,18 @@ def find_outlier2(integers):
         return my_num
     my_num = int(''.join(str(x) for x in evens))
     return my_num
+
+
+def find_outlier3(integers):
+    integers = list(set(integers))
+    even = []
+    odd = []
+    [even.append(x) if x % 2 == 0 else odd.append(x) for x in integers]
+    short, long = sorted([odd, even], key=len)
+    return list(short)[0]
+
+
+def find_outlier4(integers):
+    odd = [x for x in integers if x % 2 != 0]
+    even = [x for x in integers if x % 2 == 0]
+    return [odd, even][len(odd) > len(even)][0]

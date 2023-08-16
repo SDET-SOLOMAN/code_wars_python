@@ -28,3 +28,10 @@ def is_uppercase2(inp):
         if letter in 'abcdefghijklmnopqrstuvwxyz':
             return False
     return True
+
+
+def is_uppercase3(inp):
+    for char in inp:
+        if char.islower():
+            return False
+    return True

@@ -21,3 +21,20 @@ def to_acronym(inp):
 def to_acronym2(input):
     # only call upper() once
     return ''.join(word[0] for word in input.split()).upper()
+
+
+# no split
+def to_acronym3(inp):
+    new_inp = ""
+    status = True
+
+    for char in inp:
+
+        if status and char:
+            new_inp += char.upper()
+            status = False
+
+        elif char == ' ':
+            status = True
+
+    return new_inp

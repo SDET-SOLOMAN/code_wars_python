@@ -8,3 +8,6 @@
 
 def array_diff(a, b):
     return [x for x in a if x not in b]
+
+
+array_diff2 = lambda x, y: list(filter(lambda s: s not in y, x))

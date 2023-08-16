@@ -13,4 +13,11 @@ def ordered_count(inp):
     return [(k, v) for k, v in my_dict.items()]
 
 
-print(ordered_count('abbbrabbda'))
+ordered_count2 = lambda inp: list({d: inp.count(d) for d in inp}.items())
+
+
+def ordered_count3(inp):
+    d = {
+        k: inp.count(k) for k in inp
+    }
+    return list(d.items())

@@ -18,3 +18,6 @@ def generate_hashtag(s):
     if not s or len(s) > 139:
         return False
     return "#" + ''.join(x[0].upper() + x[1:].lower() for x in s.split())
+
+
+generate_hashtag2 = lambda word: "#" + ''.join(x.title() for x in word.split()) if word and len(word) < 140 else False

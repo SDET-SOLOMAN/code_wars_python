@@ -12,3 +12,6 @@
 
 def mouth_size(animal):
     return 'small' if animal.lower() == 'alligator' else 'wide'
+
+
+mouth_size2 = lambda word: 'wide' if word.lower() != 'alligator' else 'small'

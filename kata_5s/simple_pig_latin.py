@@ -23,6 +23,21 @@ def pig_it(text):
     return new_str[:-1]
 
 
+def pig_it4(text):
+    my_str = ''
+    special_char = "!@#$%^&*()-+?_=,<>/"
+    text = text.split()
+    for char in text:
+        if char.isalpha():
+            my_str += char[1:] + char[0] + 'ay' + " "
+
+        else:
+            my_str += char
+    if my_str[-1] not in special_char:
+        return my_str[:-1]
+    return my_str
+
+
 def pig_it2(text):
     text = text.split()
     return ' '.join([word[1:] + word[:1] + 'ay' if word.isalpha() else word for word in text])
@@ -31,5 +46,6 @@ def pig_it2(text):
 def pig_it3(text):
     return ' '.join([x[1:] + x[0] + 'ay' if x.isalpha() else x for x in text.split()])
 
-def pig_it4(text):
+
+def pig_it5(text):
     return ' '.join(map(lambda x: x[1:] + x[0] + 'ay' if x.isalpha() else x, text.split()))
