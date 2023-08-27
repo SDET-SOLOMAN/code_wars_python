@@ -77,3 +77,29 @@ def zero_plentiful2(arr):
                 zero_count = 0
         index += 1
     return yes
+
+
+def zero_plentiful3(arr):
+
+    zc = 0
+    t = 0
+
+    for i, c in enumerate(arr):
+
+        if c == 0:
+            zc += 1
+
+            if i == (len(arr) - 1) and zc >= 4:
+                t += 1
+                return t
+
+            elif i == len(arr) - 1 and zc:
+                return 0
+
+        else:
+            if zc > 3:
+                t += 1
+                zc = 0
+            if zc > 0:
+                return 0
+    return t

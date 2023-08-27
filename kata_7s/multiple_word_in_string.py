@@ -12,3 +12,6 @@
 
 def modify_multiply(st, loc, num):
     return ((st.split()[loc] + "-") * num)[:-1]
+
+
+modify_multiply2 = lambda words, pos, times: '-'.join(words.split()[pos] for num in range(1, times + 1))
