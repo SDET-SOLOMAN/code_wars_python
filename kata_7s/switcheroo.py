@@ -15,5 +15,7 @@ def switcheroo(s):
             new_s += 'a'
         else:
             new_s += 'c'
-
     return new_s
+
+
+switcheroo2 = lambda x: ''.join('b' if s == 'a' else 'a' if s == 'b' else s for s in x)

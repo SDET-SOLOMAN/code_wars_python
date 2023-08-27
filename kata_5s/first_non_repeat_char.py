@@ -39,3 +39,29 @@ def first_non_repeating_letter2(string):
         if my_dict[char.lower()] == 1:
             return char
     return ""
+
+
+def first_non_repeating_letter3(s):
+    s2 = s.lower()
+    for index, char in enumerate(s2):
+        if char not in s2[index + 1:] and char not in s2[:index]:
+            return s[index]
+    return ""
+
+
+def first_non_repeating_letter4(string):
+    for index, letter in enumerate(string):
+        if string.lower().count(letter.lower()) == 1:
+            return string[index]
+    return ""
+
+
+def first_non_repeating_letter5(string):
+    print(string)
+
+    d = {k: string.lower().count(k.lower()) for k in string}
+
+    for k, v in d.items():
+        if v == 1:
+            return k
+    return ""

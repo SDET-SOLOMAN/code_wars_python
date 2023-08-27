@@ -1,6 +1,4 @@
-arr = []
-
-for char in range(0, 5):
-    arr.append(2 * (char - 1))
-
+arr = [1, 2, 3]
+arr2 = arr
+arr2[0] = 99
 print(arr)

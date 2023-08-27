@@ -23,4 +23,33 @@ def make_password(phrase):
             new_s += str(5)
         else:
             new_s += char[0]
-    return new_s 
+    return new_s
+
+
+def make_password2(phrase):
+    d = {
+        'i': '1',
+        'I': '1',
+        'o': '0',
+        'O': '0',
+        's': '5',
+        'S': '5'
+    }
+    return ''.join(d[x[0]] if d.get(x[0]) else x[0] for x in phrase.split())
+
+
+
+def make_password3(phrase):
+    chars_replaced = {'i': "1", 'I':"1", 'o':"0", 'O':"0", 's':'5', 'S':"5"}
+    new_phrase = ''
+    try:
+        for char in phrase.split():
+            first = char[0]
+            if first in chars_replaced:
+                new_phrase += chars_replaced[first]
+            else:
+                new_phrase += first
+        return new_phrase
+    except (KeyError, ValueError, ZeroDivisionError) as err:# or can be left empty:
+        print(err)
+        return f"This item is not here {err}"

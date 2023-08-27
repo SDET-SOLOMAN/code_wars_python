@@ -20,4 +20,16 @@ def persistence(n):
         counter += 1
     return counter
 
-print(persistence(39))
+# not converting to string, using modulo
+
+def persistence2(n):
+    c = 0
+    while n > 9:
+        m = 1
+        s = n
+        while s > 0:
+            m *= s % 10
+            s //= 10
+        c += 1
+        n = m
+    return c

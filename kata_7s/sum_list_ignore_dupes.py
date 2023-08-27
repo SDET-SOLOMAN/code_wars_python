@@ -17,3 +17,35 @@ def sum_no_duplicates2(l):
 
 def sum_no_duplicates3(l):
     return sum(filter(lambda x: l.count(x) == 1, l))
+
+
+def sum_no_duplicates4(l):
+    m = 0
+    for i, c in enumerate(l):
+        if isinstance(c, int):
+            if c not in l[i + 1:] and c not in l[:i]:
+                m += c
+    return m
+
+
+def sum_no_duplicates6(l):
+    l_d = {
+
+    }
+    for char in l:
+        if l_d.get(char):
+            l_d[char] += 1
+        else:
+            l_d[char] = 1
+
+    sum_d = 0
+
+    for k, v in l_d.items():
+        if v == 1:
+            sum_d += int(k)
+    return sum_d
+
+
+sum_no_duplicates5 = lambda remove_dupes: sum(filter(lambda x: remove_dupes.count(x) == 1, remove_dupes))
+
+

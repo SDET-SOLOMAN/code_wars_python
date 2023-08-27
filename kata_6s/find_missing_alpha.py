@@ -15,6 +15,7 @@
 
 import string
 
+
 def find_missing_letter(chars):
     alphab = list(string.ascii_lowercase)
     chars2 = [x.lower() for x in chars]
@@ -29,3 +30,26 @@ def find_missing_letter(chars):
             return alphab[index_of_alphas]
         index_of_chars += 1
         index_of_alphas += 1
+
+
+def find_missing_letter2(chars):
+    first = ord(chars[0])
+    for char in chars:
+        if ord(char) != first:
+            return chr((first))
+        first += 1
+    return ""
+
+
+from string import ascii_lowercase, ascii_uppercase
+
+
+def find_missing_letter3(chars):
+    a = list(ascii_lowercase + ascii_uppercase)
+
+    a_index = a.index(chars[0])
+
+    for char in chars:
+        if a[a_index] != char:
+            return a[a_index]
+        a_index += 1
