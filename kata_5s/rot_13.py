@@ -15,14 +15,26 @@
 # "This is my first ROT13 excercise!" -> "Guvf vf zl svefg EBG13 rkprepvfr!"
 
 
-import string
+from string import ascii_lowercase, ascii_uppercase
+alpha = ascii_lowercase + ascii_lowercase + ascii_uppercase + ascii_uppercase
+
+
+# simple lambda version
+rot13_v1 = lambda word: ''.join(x if not x.isalpha() else alpha[alpha.index(x) + 13] for x in word)
+
+
+def rot13_for_loop(message):
+    new = ''
+    for char in message:
+        if not char.isalpha():
+            new += char
+        else:
+            new += alpha[alpha.find(char) + 13]
+    return new
 
 
 def rot13(message):
-
-    a = string.ascii_lowercase + string.ascii_lowercase + string.ascii_uppercase + string.ascii_uppercase
-
-    return "".join(a[a.index(x) + 13] if x.isalpha() else x for x in message)
+    return "".join(alpha[alpha.index(x) + 13] if x.isalpha() else x for x in message)
 
 
 def rot13_v2(message):

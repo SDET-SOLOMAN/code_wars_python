@@ -15,3 +15,14 @@ def small_enough2(array, limit):
 
 
 small_enough3 = lambda arr, num: all([x <= num for x in arr])
+
+def small_enough4(array, limit):
+    a = [x for x in array if x <= limit]
+    return [False, True][a == array]
+
+
+def small_enough5(array, limit):
+    for num in array:
+        if limit < num:
+            return False
+    return True
