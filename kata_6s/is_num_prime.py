@@ -18,10 +18,11 @@ def is_prime(num):
     if num <= 1:
         return False
     i = 2
-    while (i <= num ** 0.5 ):
+    while (i <= num ** 0.5):
         if num % i == 0:
             return False
         i += 1
     return True
+
 
 is_prime2 = lambda num: False if num < 2 else all(num % x != 0 for x in range(2, num))

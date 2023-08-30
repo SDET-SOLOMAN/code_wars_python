@@ -27,7 +27,8 @@ def strong_num(number):
 
     return "STRONG!!!!" if num == number else "Not Strong !!"
 
-#not using str()
+
+# not using str()
 def strong_num2(number):
     temp_number = number
     num = 0
@@ -45,3 +46,9 @@ def strong_num2(number):
         number //= 10
 
     return 'STRONG!!!!' if num == temp_number else 'Not Strong !!'
+
+
+from math import factorial
+
+
+strong_num3 = lambda n: ["Not Strong !!", "STRONG!!!!"][n == sum(factorial(int(d)) for d in str(n))]

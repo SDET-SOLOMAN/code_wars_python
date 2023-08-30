@@ -75,7 +75,8 @@ def play_pass(s, n):
 al = string.ascii_lowercase + string.ascii_lowercase + string.ascii_uppercase + string.ascii_uppercase
 
 play_pass2 = lambda s, n: ''.join(al[al.index(x) + n].upper() if x.isalpha() and i % 2 == 0
-                else al[al.index(x) + n].lower() if x.isalpha() else str(9 - int(x) if x.isdigit() else x)
+                                  else al[al.index(x) + n].lower() if x.isalpha() else str(
+    9 - int(x) if x.isdigit() else x)
                                   for i, x in enumerate(s))[::-1]
 
 
@@ -114,3 +115,33 @@ def play_pass3(s, n):
             else:
                 new_s += s[char]
     return new_s[::-1]
+
+
+import string
+
+
+def play_pass2(s, n):
+    alphabet = string.ascii_lowercase + string.ascii_lowercase + string.ascii_uppercase + string.ascii_uppercase
+    new_word = ''
+
+    for char in s:
+        if char.isalpha():
+            new_word += alphabet[alphabet.index(char) + n]
+        elif char.isdigit():
+            new_word += str(abs(9 - int(char)))
+        else:
+            new_word += char
+
+    new_word_remix = ''.join(x.upper() if i % 2 == 0 else x.lower() for i, x in enumerate(new_word))
+
+    new_s = ''
+
+    for char in range(len(new_word_remix) - 1, -1, -1):
+        new_s += new_word_remix[char]
+    return new_s
+
+
+al = string.ascii_lowercase + string.ascii_lowercase + string.ascii_uppercase + string.ascii_uppercase
+
+play_pass3 = lambda s, n: ''.join(al[al.index(x) + n].upper() if x.isalpha() and i % 2 == 0 else al[
+    al.index(x) + n].lower() if x.isalpha() else str(9 - int(x) if x.isdigit() else x) for i, x in enumerate(s))[::-1]

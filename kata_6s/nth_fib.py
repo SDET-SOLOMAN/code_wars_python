@@ -38,3 +38,12 @@ def nth_fib2(n):
         n2 = n3
     return n1
 
+
+def nth_fib3(n):
+    a = 0
+    b = 1
+
+    for char in range(0, n - 1):
+        a, b = b, a + b
+
+    return a
