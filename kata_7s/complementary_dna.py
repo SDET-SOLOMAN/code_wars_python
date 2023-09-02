@@ -39,3 +39,13 @@ def DNA_strand2(dna):
 def DNA_strand3(dna):
     return dna.replace("A", '1').replace("T","2").replace("C", '3')\
         .replace("G","4").replace("1","T").replace('2', 'A').replace("3","G").replace('4', 'C')
+
+
+def DNA_strand4(dna):
+    change = {
+        "A": "T",
+        "T": "A",
+        "C": "G",
+        "G": "C"
+    }
+    return ''.join(change[x] if change.get(x) else x for x in dna)

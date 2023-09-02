@@ -1,4 +1,7 @@
-arr = [1, 2, 3]
-arr2 = arr
-arr2[0] = 99
-print(arr)
+array = [["Привет", "всем", "кто"], ["изучает", "язык", "программирования"], ["java"]]
+
+calc = 0
+
+for char in array:
+    for num in char:
+        print(num)

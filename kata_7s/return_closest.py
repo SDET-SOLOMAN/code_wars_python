@@ -25,4 +25,7 @@ def closest_multiple_10_v2(i):
 
 
 def closest_multiple_10_v3(i):
-    return (round(i, -1))
+    return round(i, -1)
+
+
+closest_multiple_10_ = lambda x: (x // 10) * 10 if x % 10 < 5 else ((x // 10) + 1) * 10

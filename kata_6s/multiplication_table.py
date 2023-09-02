@@ -17,3 +17,15 @@ multiplication_table = lambda array: [[x * s for x in range(1, array + 1)] for s
 def multiplication_table2(size):
     my_list = [[j * i for j in range(1, size + 1)] for i in range(1, size + 1)]
     return my_list
+
+
+# using a standard for loop:
+
+def multiplication_table3(size):
+    number = []
+    for char in range(1, size + 1):
+        n = []
+        for char2 in range(1, size + 1):
+            n.append(char2 * char)
+        number.append(n)
+    return number

@@ -23,3 +23,13 @@ def anagrams(word, words):
 
 
 anagrams_one_line = lambda word, words: list(filter(lambda x: sorted(x) == sorted(word), words))
+
+
+def anagrams3(word, words):
+    wordi = sorted([x for x in word])
+    list1 = []
+    for num in words:
+        num1 = sorted([x for x in num])
+        if ''.join(wordi) == "".join(num1):
+            list1.append(num)
+    return list1
