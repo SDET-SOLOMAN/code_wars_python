@@ -14,8 +14,6 @@ def remove_zeros(num):
     while action:
         if (num % 10) == 0:
             num = num // 10
-        elif num == 0:
-            action = False
         else:
             action = False
     return num
