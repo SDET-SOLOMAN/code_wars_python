@@ -26,3 +26,6 @@ def get_sum_of_digits(num):
 
 def get_sum_of_digits2(num):
     return sum(map(int, str(num)))
+
+
+get_sum_of_digits3 = lambda num: sum(int(x) for x in str(num))

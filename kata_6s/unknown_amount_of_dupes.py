@@ -23,6 +23,7 @@
 # amount of duplicates variable, according to the length of the array
 
 def find_dups_miss(arr):
+
     sorted_set_arr = sorted(list(set(arr)))
 
     dict_values = {k: arr.count(k) for k in sorted(arr) if arr.count(k) > 1}
@@ -35,3 +36,14 @@ def find_dups_miss(arr):
         num += 1
 
     return [num, list(dict_values)]
+
+
+def find_dups_miss2(arr):
+
+    arr.sort()
+
+    a = [x for x in range(arr[0], arr[-1] + 1) if x not in arr]
+
+    a.insert(1, sorted(list(set([x for x in arr if arr.count(x) > 1]))))
+
+    return a

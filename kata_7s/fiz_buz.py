@@ -18,7 +18,6 @@ def secret_formula(n):
         return "Buzz"
     elif n % 3 == 0:
         return "Fizz"
-
     return n
 
 

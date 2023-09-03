@@ -1,5 +1,5 @@
-# factorial of 5 = !5:
-# 1 * 2 * 3 * 4 * 5
+# factorial 1 * 2 * 3 * 4 * 5al of 5 = !5:
+#
 
 # factorial of 4 = !4
 # 1 * 2 * 3 * 4
