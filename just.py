@@ -1,3 +1,4 @@
-l = [1, 2, 3, 4, 5]
-l2 = l.index('2')
-print(l2)
+def return_sum(n1, n2):
+    print(n1 + n2)
+
+print(return_sum(2, 3))

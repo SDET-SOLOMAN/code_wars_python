@@ -27,3 +27,5 @@ def kooka_counter(laughing):
             in_here = char
             counter += 1
     return counter
+
+kooka_counter2 = lambda l: 0 if l == '' else l.count('Hah') + l.count('haH') + 1

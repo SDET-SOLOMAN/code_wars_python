@@ -1,7 +1,4 @@
-array = [["Привет", "всем", "кто"], ["изучает", "язык", "программирования"], ["java"]]
+def return_sum(n1, n2):
+    print(n1 + n2)
 
-calc = 0
-
-for char in array:
-    for num in char:
-        print(num)
+print(return_sum(2, 3))
