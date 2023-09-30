@@ -20,3 +20,17 @@ def hydrate(drink_string):
     if counter > 1:
         return f"{counter} glasses of water"
     return f"{counter} glass of water"
+
+
+def hydrate2(d):
+    num_drinks = sum(int(x) for x in d if x.isdigit())
+    return "{} {} of water".format(num_drinks, 'glass') if num_drinks == 1 else "{} {} of water".format(num_drinks,
+                                                                                                        'glasses')
+
+
+from functools import reduce
+
+
+def hydrate3(d):
+    num_drinks = reduce(lambda x, y: x + y, (int(x) for x in d if x.isdigit()))
+    return f"{num_drinks} glass of water" if num_drinks < 2 else f"{num_drinks} glasses of water"

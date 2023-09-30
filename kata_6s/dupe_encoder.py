@@ -78,3 +78,20 @@ def duplicate_encode6(word):
         index += 1
 
     return new_s
+
+
+def duplicate_encode7(word):
+    word = word.lower()
+    d = {k: ("(" if word.count(k) < 2 else ")") for k in word}
+    return ''.join(d.get(char) for char in word)
+
+
+def duplicate_encode8(word):
+    word = word.lower()
+    s = ""
+    for i, c in enumerate(word):
+        if c in word[:i] or c in word[i + 1:]:
+            s += ")"
+        else:
+            s += "("
+    return s
