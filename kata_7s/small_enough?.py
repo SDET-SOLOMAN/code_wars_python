@@ -16,6 +16,7 @@ def small_enough2(array, limit):
 
 small_enough3 = lambda arr, num: all([x <= num for x in arr])
 
+
 def small_enough4(array, limit):
     a = [x for x in array if x <= limit]
     return [False, True][a == array]
@@ -26,3 +27,12 @@ def small_enough5(array, limit):
         if limit < num:
             return False
     return True
+
+
+def small_enough6(arr, limit):
+    n = list(filter(lambda x: x > limit, arr))
+    return not n
+
+
+def small_enough7(arr, limit):
+    return sorted(arr)[-1] <= limit

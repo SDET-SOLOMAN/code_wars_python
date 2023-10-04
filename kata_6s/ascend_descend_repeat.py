@@ -51,3 +51,8 @@ def ascend_descend3(length, minimum, maximum):
         n.extend([x for x in range(minimum, maximum + 1)])
         n.extend([x for x in range(maximum - 1, minimum, -1)])
     return ''.join(str(x) for x in n[:length])[:length]
+
+
+def ascend_descend4(length, minimum, maximum):
+    return ((''.join(str(x) for x in range(minimum, maximum + 1)) + "".join(
+        str(x) for x in range(maximum - 1, minimum, -1))) * length)[:length]

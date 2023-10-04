@@ -30,3 +30,7 @@ def first_non_consecutive(arr):
             return char
         index += 1
     return None
+
+def first_non_consecutive2(arr):
+    new = [x for x in range(arr[0], arr[-1] + 1)]
+    return [x for i, x in enumerate(arr) if new[i] != x][0] if new != arr else None

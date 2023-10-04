@@ -19,3 +19,15 @@ def switcheroo(s):
 
 
 switcheroo2 = lambda x: ''.join('b' if s == 'a' else 'a' if s == 'b' else s for s in x)
+
+
+def switcheroo3(s):
+    d = {
+        'a': 'b',
+        'b': 'a'
+    }
+    return ''.join(d[x] if d.get(x) else x for x in s)
+
+
+def switcheroo4(s):
+    return s.replace("a", "1").replace("b", "2").replace('1', "b").replace("2", "a")
