@@ -15,3 +15,11 @@ def get_sum_of_digits(num):
 
 
 get_sum_of_digits2 = lambda num: sum(int(x) for x in str(num))
+
+
+def get_sum_of_digits3(num):
+    n = 0
+    while num > 0:
+        n += num % 10
+        num //= 10
+    return n

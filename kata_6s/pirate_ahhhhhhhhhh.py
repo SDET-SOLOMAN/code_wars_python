@@ -32,3 +32,9 @@ def grabscrab2(said, possible_words):
 
         k = True
     return a
+
+
+def grabscrab3(said, p):
+    s = ''.join(sorted(said))
+    p2 = [''.join(sorted(x)) for x in p]
+    return [p[i] for i, x in enumerate(p2) if x == s]

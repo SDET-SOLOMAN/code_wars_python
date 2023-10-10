@@ -49,3 +49,29 @@ def high(x):
 # using ord() func ... found this through chatgpt solution
 def high_v2(x):
     return max(x.split(), key=lambda val: sum(ord(y) - 96 for y in val))
+
+
+import string
+
+
+def high5(x):
+    a = string.ascii_lowercase
+    x = x.lower()
+
+    word = ''
+    score = 0
+
+    temp_w = ""
+    temp = 0
+
+    for i, char in enumerate(x):
+        if char != " ":
+            temp_w += char
+            temp += a.index(char) + 1
+        if i == len(x) - 1 or char == " ":
+            if temp > score:
+                score = temp
+                word = temp_w
+            temp_w = ""
+            temp = 0
+    return word
