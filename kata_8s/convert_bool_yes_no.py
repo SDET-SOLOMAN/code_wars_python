@@ -8,3 +8,7 @@ def bool_to_word(boolean):
         return "Yes"
     return "No"
     # return "Yes" if boolean else "No"
+
+
+def boolean_to_string2(b):
+    return ["False", "True"][b == True]
