@@ -12,3 +12,5 @@ def bool_to_word(boolean):
 
 def boolean_to_string2(b):
     return ["False", "True"][b == True]
+
+bool_to_word(True)
