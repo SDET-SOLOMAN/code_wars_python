@@ -10,3 +10,19 @@ def remove_char2(s):
     s.pop()
     s.pop(0)
     return ''.join(s)
+
+def remove_char3(s):
+    num = len(s)
+    if num <= 2:
+        return ''
+    return s[1:-1]
+
+
+remove_char4 = lambda word: ''.join([word[x] for x in range(1, len(word) - 1)])
+
+
+def remove_char5(s):
+    new_s = ''
+    for char in range(1, len(s) - 1):
+        new_s += s[char]
+    return new_s
