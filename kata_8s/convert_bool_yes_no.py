@@ -10,7 +10,7 @@ def bool_to_word(boolean):
     # return "Yes" if boolean else "No"
 
 
-def boolean_to_string2(b):
-    return ["False", "True"][b == True]
+bool_to_word2 = lambda b: ["No", "Yes"][b]
 
-bool_to_word(True)
+
+bool_to_word3 = lambda x: "Yes" if x else "No"
