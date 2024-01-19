@@ -28,3 +28,10 @@ def friend3(x):
 friend4 = lambda names: list(filter(lambda x: len(x) == 4, names))
 
 friend5 = lambda names: [name for name in names if len(name) == 4]
+
+
+len_meter = lambda x: True if len(x) == 4 else False
+def friend4(s):
+    if not s:
+        return []
+    return [x for x in s if len_meter(x)]
