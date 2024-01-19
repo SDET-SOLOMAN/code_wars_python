@@ -9,3 +9,35 @@ def sum_two_smallest_numbers(numbers):
     numbers = sorted(numbers)
     return numbers[0] + numbers[1]
 
+
+def sum_two_smallest_numbers2(numbers):
+    if not numbers or len(numbers) < 2:
+        return 0
+    numbers.sort()
+    a, b = numbers[0], numbers[1]
+    return a + b
+
+
+# not using sort or sorted functions
+def sum_two_smallest_numbers3(numbers):
+
+    if not numbers or len(numbers) < 2:
+        return 0
+
+    numbers = [x for x in numbers if x > 0]
+
+    my_min = numbers[0]
+
+    for num in numbers:
+        if num > 0 and num < my_min:
+            my_min = num
+    numbers.remove(my_min)
+
+    my_min2 = numbers[0]
+
+    for num in numbers:
+        if num >= 0 and num < my_min2:
+            my_min2 = num
+
+    return my_min + my_min2
+

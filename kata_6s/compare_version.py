@@ -32,3 +32,28 @@ def compare_versions2(version1, version2):
             if int(my_first[num]) < int(my_second[num]):
                 return False
     return True
+
+
+def compare_versions3(v1, v2):
+    if not v1 or not v2:
+        return False
+
+    v1, v2 = v1.split("."), v2.split(".")
+
+    switcher = 1 if len(v1) > len(v2) else 0 if len(v1) == len(v2) else 2
+
+    while switcher != 0:
+
+        if switcher == 1:
+            v2.append("0")
+
+        elif switcher == 2:
+            v1.append("0")
+
+        switcher = 1 if len(v1) > len(v2) else 0 if len(v1) == len(v2) else 2
+
+    for i, c in enumerate(v1):
+        if int(c) < int(v2[i]):
+            return False
+
+    return True

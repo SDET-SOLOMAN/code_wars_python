@@ -10,9 +10,15 @@ def repeat_str(repeat, string):
     return string * repeat
 
 def repeat_str2(repeat, string):
-    index = 0
+    counter = 0
     new_string = ''
-    while index < repeat:
+    while counter < repeat:
         new_string += string
-        index += 1
+        counter += 1
     return new_string
+
+def repeat_str3(repeat, string):
+    new_word = ''
+    for num in range(0, repeat):
+        new_word += string
+    return new_word

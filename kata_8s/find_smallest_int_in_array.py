@@ -16,3 +16,5 @@ def find_smallest_int2(arr):
         if lowest > num:
             lowest = num
     return lowest
+
+find_smallest_int3 = lambda nums: sorted(nums)[0]

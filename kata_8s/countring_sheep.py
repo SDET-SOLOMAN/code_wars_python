@@ -19,3 +19,13 @@ def count_sheeps(sheep):
 
 def count_sheeps2(sheep):
     return sheep.count(True)
+
+# just some more complicated = fun solutions
+from functools import reduce
+def count_sheeps3(sheep):
+    return reduce(lambda x, y: x + y, (1 for x in sheep if x)) if True in sheep else 0
+
+def count_sheeps4(sheep):
+    return sum(x for x in sheep if x)
+
+count_sheep = lambda s: len([x for x in s if x])

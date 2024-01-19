@@ -12,3 +12,32 @@
 def solve(nums,div):
     return [x + x % div for x in nums]
 
+solve2 = lambda nums, div: list(map(lambda x: (x % div) + x, nums))
+
+# good old for loop
+def solve3(nums, div):
+    if not nums:
+        return []
+
+    new_nums = []
+
+    for num in nums:
+        digit = num % div
+        new_nums.append(num + digit)
+    return new_nums
+
+#good old while loop
+def solve4(nums, div):
+    if not nums:
+        return []
+
+    new_nums = []
+    my_index = 0
+    len_nums = len(nums)
+
+    while my_index < len_nums:
+        temp = nums[my_index]
+        digit = temp % div
+        new_nums.append(temp + digit)
+        my_index += 1
+    return new_nums

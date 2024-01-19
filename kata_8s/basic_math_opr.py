@@ -11,5 +11,12 @@
 # ('/', 49, 7) --> 7
 
 def basic_op(operator, value1, value2):
-    my_opr = {"+": (value1 + value2), "-": (value1 - value2), "*": (value1 * value2), "/": (value1 / value2)}
+    my_opr = {
+        "+": (value1 + value2),
+        "-": (value1 - value2),
+        "*": (value1 * value2),
+        "/": (value1 / value2)
+    }
     return my_opr.get(operator)
+
+basic_op2 =  lambda o, v1, v2: {"+": v1 + v2, "-": v1 - v2, "*": v1 * v2, "/": v1 / v2}.get(o)
