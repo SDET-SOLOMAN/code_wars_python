@@ -19,3 +19,7 @@ def distinct2(seq):
 distinct3 = lambda seq: list(dict.fromkeys(seq))
 
 distinct4 = lambda seq: list(sorted(set(seq), key=seq.index))
+
+# using key indexing to find out if char is present before the current index
+def distinct5(x):
+    return [x[i] for i in range(0, len(x)) if x[i] not in x[:i]]

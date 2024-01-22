@@ -15,3 +15,6 @@ def mouth_size(animal):
 
 
 mouth_size2 = lambda word: 'wide' if word.lower() != 'alligator' else 'small'
+
+# using True/False aka conditional logic
+mouth_size3 = lambda animal: ["wide", 'small'][animal.lower() == 'alligator']
