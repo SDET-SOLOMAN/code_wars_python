@@ -36,3 +36,13 @@ def like_or_dislike(lst):
             status = letter
             num = 0
     return status
+
+
+from preloaded import Like, Dislike, Nothing
+
+def like_or_dislike2(lst):
+    first = "Nothing"
+    for char in lst:
+        if char != first: first = char
+        else: first = "Nothing"
+    return first
