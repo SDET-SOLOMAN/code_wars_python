@@ -48,4 +48,10 @@ def sum_no_duplicates6(l):
 
 sum_no_duplicates5 = lambda remove_dupes: sum(filter(lambda x: remove_dupes.count(x) == 1, remove_dupes))
 
+# using enumerate
+def sum_no_duplicates6(l):
+    return sum([x for i, x in enumerate(l) if x not in l[:i] and x not in l[i + 1:]])
 
+# using dictionary
+def sum_no_duplicates7(l):
+    return sum(k for k, v in {k:l.count(k) for k in l}.items() if v == 1)
