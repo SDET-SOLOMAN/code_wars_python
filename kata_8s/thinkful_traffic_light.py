@@ -12,3 +12,15 @@ def update_light(current):
     elif current == 'yellow':
         return 'red'
     return 'green'
+
+
+# using match / python Switch
+
+def update_light2(current):
+    match current:
+        case "red":
+            return "green"
+        case "green":
+            return "yellow"
+        case "yellow":
+            return "red"

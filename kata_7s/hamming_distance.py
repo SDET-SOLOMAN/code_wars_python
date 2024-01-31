@@ -17,3 +17,7 @@ def hamming_distance(a, b):
         if a[char] != b[char]:
             counter += 1
     return counter
+
+# using list comprehension and len func
+def hamming_distance2(a, b):
+    return len([x for i,x in enumerate(a) if b[i] != x])

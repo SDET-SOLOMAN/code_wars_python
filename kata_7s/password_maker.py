@@ -53,3 +53,6 @@ def make_password3(phrase):
     except (KeyError, ValueError, ZeroDivisionError) as err:# or can be left empty:
         print(err)
         return f"This item is not here {err}"
+
+# one line solution
+make_password4 = lambda word: ''.join(x[0] for x in word.replace("I", "1").replace('i', "1").replace('O', "0").replace('o', "0").replace("S", "5").replace('s', "5").split())

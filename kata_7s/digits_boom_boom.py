@@ -18,3 +18,17 @@ def explode(s):
 
 def explode2(s):
     return ''.join(map(lambda x: str(x) * int(x), s))
+
+
+multi = lambda x: x * int(x)
+
+def explode3(s):
+    return ''.join(map(multi, s))
+
+# a basic for loop
+def explode4(s):
+    returning_string = ""
+    for char in s:
+        if char.isdigit():
+            returning_string += char * int(char)
+    return returning_string

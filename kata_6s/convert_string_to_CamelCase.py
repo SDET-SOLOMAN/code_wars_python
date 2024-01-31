@@ -74,3 +74,21 @@ def to_camel_case4(text):
         else:
             turn_upper = True
     return new_s
+
+
+def to_camel_cas5e(text):
+    if not text:
+        return ""
+
+    # text = text.replace("_", "-").replace("-", " ").split()
+
+    tex = []
+    temp = ""
+
+    for i, char in enumerate(text):
+        if char != "_" and char != "-":
+            temp += char
+        if char == "_" or char == "-" or (i == len(text) - 1 and temp):
+            tex.append(temp)
+            temp = ""
+    return tex[0] + ''.join(x.capitalize() for x in tex[1:])

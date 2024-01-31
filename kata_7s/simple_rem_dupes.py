@@ -35,3 +35,8 @@ def solve2(arr):
 
 solve3 = lambda arr: [num for index, num in enumerate(arr)
                      if num not in arr[index + 1:]]
+
+def solve4(arr):
+    a = arr.copy()
+    [a.remove(x) for i, x in enumerate(arr) if x in arr[:i]]
+    return a
