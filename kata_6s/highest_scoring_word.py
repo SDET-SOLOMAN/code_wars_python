@@ -75,3 +75,40 @@ def high5(x):
             temp_w = ""
             temp = 0
     return word
+
+
+import string
+
+
+def high(x):
+    if not x:
+        return ""
+
+    nums = [x for x in range(1, 27)]
+
+    alphas = string.ascii_lowercase
+
+    letters = dict(zip(alphas, nums))
+
+    temp_word = ""
+    temp_score = 0
+
+    final_word = ""
+    final_score = 0
+
+    for i, char in enumerate(x):
+
+        if char != " ":
+            temp_word += char
+            temp_score += letters[char]
+
+        if i == len(x) - 1 or char == " ":
+            if temp_score > final_score:
+                final_score = temp_score
+                final_word = temp_word
+            temp_word = ""
+            temp_score = 0
+
+    return final_word
+
+

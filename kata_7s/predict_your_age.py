@@ -25,3 +25,9 @@ def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
     sq_list = list(map(lambda x: x * x, (age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8)))
     sq_l = functools.reduce(lambda x, y: x + y, sq_list)
     return math.sqrt(sq_l) // 2
+
+
+multi = lambda x: x * x
+
+def predict_age2(*args):
+    return ((sum(map(multi, args))) ** .5) // 2

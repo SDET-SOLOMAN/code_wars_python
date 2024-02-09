@@ -48,3 +48,8 @@ def pythagorean_triple2(integers):
 def pythagorean_triple3(integers):
     i, j, k = sorted(integers)
     return i * i + j * j == k * k
+
+def pythagorean_triple4(*args):
+    lst = sorted(*args)
+    a, b, c = lst
+    return a ** 2 + b ** 2 == c ** 2

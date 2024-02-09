@@ -9,3 +9,7 @@
 
 def find_multiples(integer, limit):
     return [x for x in range(integer, limit + 1) if x % integer == 0]
+
+
+def find_multiples2(i, l):
+    return list(filter(lambda x: x % i == 0, range(i, l + 1)))

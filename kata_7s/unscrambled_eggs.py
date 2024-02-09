@@ -26,3 +26,7 @@ def unscramble_eggs2(word):
             num += 3
 
     return new_word
+
+
+def unscramble_eggs3(word):
+    return ''.join(word.replace("egg", ""))
