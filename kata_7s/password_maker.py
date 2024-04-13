@@ -56,3 +56,9 @@ def make_password3(phrase):
 
 # one line solution
 make_password4 = lambda word: ''.join(x[0] for x in word.replace("I", "1").replace('i', "1").replace('O', "0").replace('o', "0").replace("S", "5").replace('s', "5").split())
+
+
+def make_password4(phrase):
+    c = {'i': "1", 'o': "0", 's': "5"}
+
+    return ''.join(c[x[0].lower()] if c.get(x[0].lower()) else x[0] for x in phrase.split())

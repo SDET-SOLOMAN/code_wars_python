@@ -19,3 +19,6 @@ def remove_exclamation_marks3(s):
 
 
 remove_exclamation_marks4 = lambda word: ''.join(filter(lambda x: x != "!", word))
+
+
+remove_exclamation_marks5 = lambda x: x.replace("!", "")

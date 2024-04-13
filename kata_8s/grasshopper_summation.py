@@ -10,3 +10,7 @@
 from functools import reduce
 
 summation = lambda n: reduce(lambda x,y: x + y, range(1, n + 1))
+
+
+def summation2(num):
+    return sum(n for n in range(1, num + 1))

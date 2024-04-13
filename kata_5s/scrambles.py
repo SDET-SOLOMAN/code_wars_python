@@ -35,3 +35,14 @@ def scramble3(s1, s2):
 
     # or
     # return all(v <= s11[k] if k in s11 else 0 for k, v in s22.items())
+
+
+def scramble4(s1, s2):
+    d = {x: s1.count(x) for x in set(s1)}
+
+    for l in s2:
+        if l not in d or d[l] < 1:
+            return False
+        d[l] -= 1
+
+    return True

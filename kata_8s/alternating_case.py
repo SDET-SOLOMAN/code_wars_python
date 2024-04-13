@@ -19,3 +19,14 @@ def to_alternating_case(string):
 
 to_alternating_case2 = lambda string: ''.join(
     x if not x.isalpha() else x.lower() if x.isupper() else x.upper() for x in string)
+
+
+up = lambda x: x.upper()
+down = lambda x: x.lower()
+
+def to_alternating_case3(string):
+    return "".join([up(x), down(x)][x.isupper()] if x.isalpha() else x for x in string)
+
+
+def to_alternating_case4(string):
+    return string.swapcase()

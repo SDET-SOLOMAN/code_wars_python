@@ -65,3 +65,12 @@ def first_non_repeating_letter5(string):
         if v == 1:
             return k
     return ""
+
+
+def first_non_repeating_letter6(s):
+    j = s.lower()
+
+    for i, c in enumerate(j):
+        if c not in j[:i] and c not in j[i + 1:]:
+            return s[i]
+    return ""

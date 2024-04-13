@@ -36,3 +36,7 @@ def small_enough6(arr, limit):
 
 def small_enough7(arr, limit):
     return sorted(arr)[-1] <= limit
+
+def small_enough8(array, limit):
+    s = [x for x in array if x <= limit]
+    return [False, True][s == array]

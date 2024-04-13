@@ -32,3 +32,9 @@ def explode4(s):
         if char.isdigit():
             returning_string += char * int(char)
     return returning_string
+
+
+def explode5(s):
+    j = list(map(int, s))
+
+    return "".join(x * j[i] for i, x in enumerate(s))

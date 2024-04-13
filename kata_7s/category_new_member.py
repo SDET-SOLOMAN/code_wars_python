@@ -24,3 +24,4 @@ def open_or_senior2(data):
 
 def open_or_senior3(data):
     return ["Senior" if x[0] >= 55 and x[1] > 7 else "Open" for x in data]
+

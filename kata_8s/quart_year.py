@@ -32,7 +32,7 @@ def quarter_of2(month):
     return 4
 
 
-def quarter_of(month):
+def quarter_of3(month):
     d = {
         1: [1, 2, 3], 2: [4, 5, 6], 3: [7, 8, 9], 4: [10, 11, 12]
     }
@@ -40,3 +40,15 @@ def quarter_of(month):
     for k, v in d.items():
         if month in v:
             return k
+
+
+def quarter_of4(month):
+    match month:
+        case 1 | 2 | 3:
+            return 1
+        case 4 | 5 | 6:
+            return 2
+        case 7 | 8 | 9:
+            return 3
+        case 10 | 11 | 12:
+            return 4

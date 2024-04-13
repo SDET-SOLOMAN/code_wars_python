@@ -80,7 +80,7 @@ def high5(x):
 import string
 
 
-def high(x):
+def hig6h(x):
     if not x:
         return ""
 
@@ -111,4 +111,6 @@ def high(x):
 
     return final_word
 
-
+# found this solution on codeWars
+def high6(x):
+    return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))

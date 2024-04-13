@@ -33,3 +33,10 @@ missing_no4 = lambda nums: reduce(lambda x, y: x + y, range(0, 101)) - reduce(la
 
 
 missing_no5 = lambda x: sum(filter(lambda s: s not in x, range(0, 101)))
+
+def missing_no6(nums):
+    nums.sort()
+    for i, c in enumerate(nums):
+        if i != c:
+            return i
+    return 100

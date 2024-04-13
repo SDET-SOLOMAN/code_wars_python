@@ -8,6 +8,11 @@
 # * [42, 54, 65, 87, 0]             -> min = 0, max = 87
 # * [5]                             -> min = 5, max = 5
 
+
+minimum = lambda x: sorted(x)[0]
+maximum = lambda x: max(x)
+
+
 def minimum(arr):
     my_num = arr[0]
     for num in arr:
