@@ -19,3 +19,25 @@ def descending_order3(num):
 def descending_order4(num):
     a = sorted([int(x) for x in str(num)], reverse=True)
     return int(''.join(str(x) for x in a))
+
+
+# ------ using multiple functions
+
+def list_maker(x):
+    s = []
+
+    while x > 0:
+        s.append(x % 10)
+        x //= 10
+
+    return s
+
+
+string_maker = lambda x: map(str, sorted(list_maker(x), reverse=True))
+
+
+def descending_order5(num):
+    if not num or num <= 0:
+        return 0
+
+    return int(''.join(string_maker(num)))

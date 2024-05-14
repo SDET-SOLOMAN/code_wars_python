@@ -24,4 +24,7 @@ def accum2(s):
 # using comprehension
 def accum3(s):
     return "".join([s[x].upper() + s[x].lower() * x + "-"
-                   for x in range(0, len(s))])[:-1]
+                    for x in range(0, len(s))])[:-1]
+
+
+accum4 = lambda word: '-'.join((letter * (ind + 1)).title() for ind, letter in enumerate(word))

@@ -20,3 +20,27 @@ def square_digits2(num):
     return int(my_sol)
 
 
+#------
+# using map and funcs
+
+s = lambda x: str(int(x) ** 2)
+
+
+def another_func(x):
+    if not x or x <= 0:
+        return [0]
+
+    s = []
+
+    while x > 0:
+        s.append(x % 10)
+        x //= 10
+    return s[::-1]
+
+
+def square_digits3(num):
+    return int(''.join(map(s, another_func(num))))
+
+#-------------------------------
+def square_digits4(num):
+    return int(''.join([str(int(x) * int(x)) for x in str(num)]))

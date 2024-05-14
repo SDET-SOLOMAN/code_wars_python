@@ -47,4 +47,9 @@ def high_and_low6(numbers):
     return f"{my_list[0]} {my_list[-1]}"
 
 
-print(sorted("bitcoin take over the world maybe who knows perhaps".split(), key=len))
+def high_and_low7(numbers):
+    n = sorted(map(int, numbers.split()))
+
+    m1, m2 = n[0], n[-1]
+
+    return f"{m2} {m1}"
