@@ -17,3 +17,26 @@ def find_short2(s):
 
 def find_short3(s):
     return len(sorted(s.split(), key=len)[0])
+
+
+def find_short4(s):
+    length = 999999
+
+    for char in s.split():
+
+        temp = 0
+
+        for c in char:
+            temp += 1
+
+        if temp < length:
+            length = temp
+
+    return length
+
+
+def find_short5(s):
+    return min(map(len, s.split()))
+
+
+find_short6 = lambda words: len(sorted(words.split(), key=len)[0])

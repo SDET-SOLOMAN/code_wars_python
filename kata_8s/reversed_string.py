@@ -16,3 +16,12 @@ def solution2(string):
         index += 1
     return new_string
 print(solution2("world"))
+
+
+def solution3(st):
+    s = ""
+
+    for num in range(len(st) - 1, -1, -1):
+        s += st[num]
+
+    return s

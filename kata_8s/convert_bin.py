@@ -17,3 +17,9 @@ def bin_maker(num):
 
 def to_binary(n):
     return int(bin_maker(n))
+
+
+# ------------
+
+def to_binary2(n):
+    return int(bin(n)[2:])
