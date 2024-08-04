@@ -20,3 +20,20 @@ def basic_op(operator, value1, value2):
     return my_opr.get(operator)
 
 basic_op2 =  lambda o, v1, v2: {"+": v1 + v2, "-": v1 - v2, "*": v1 * v2, "/": v1 / v2}.get(o)
+
+
+# using match
+
+def basic_op(o, v1, v2):
+
+    match o:
+        case '+':
+            return v1 + v2
+        case '-':
+            return v1 - v2
+        case '*':
+            return v1 * v2
+        case '/':
+            return v1 / v2
+        case _:
+            raise ValueError('Wrong Operator')

@@ -12,3 +12,11 @@ def maps2(a):
 
 def maps3(a):
     return map(lambda x:2*x, a)
+
+
+# using function within function
+
+multi = lambda x: x * 2
+
+def maps4(a):
+    return list(map(multi, a))

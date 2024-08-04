@@ -1,5 +1,5 @@
 # Create a function that checks if a number n is divisible by two numbers x AND y.
-# All inputs are strictly positive numbers.
+# All inputs are positive, non-zero numbers.
 
 # Examples:
 # 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
@@ -7,10 +7,13 @@
 # 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
 # 4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
 
-def is_divisible(n,x,y):
-    return n % x == 0 and n % y == 0
 
-is_divisible2 = lambda n, x, y: n % x == 0 and n % y == 0
+is_divisible = lambda n, x, y: [False, True][n % x == 0 and n % y == 0]
 
+def is_divisible2(n,x,y):
+    return True if n % x == 0 and n % y == 0 else False
 
-is_divisible3 = lambda n, x, y: [False, True][n % x == 0 and n % y == 0]
+def is_divisible3(n,x,y):
+    if n % x == 0 and n % y == 0:
+        return True
+    return False

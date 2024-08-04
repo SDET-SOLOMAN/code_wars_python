@@ -57,3 +57,44 @@ def compare_versions3(v1, v2):
             return False
 
     return True
+
+
+def compare_versions4(v1, v2):
+
+    v1 = v1.split(".")
+    v2 = v2.split(".")
+
+    while v1 and v2:
+
+        if int(v1[0]) != int(v2[0]):
+            return int(v1[0]) > int(v2[0])
+
+        v1 = v1[1:]
+        v2 = v2[1:]
+
+    return len(v2) == 0
+
+
+def compare_versions5(v1, v2):
+    v1, v2 = v1.split("."), v2.split(".")
+    l1 = len(v1)
+    l2 = len(v2)
+    cycle = True
+
+    while cycle:
+
+        if len(v1) == len(v2):
+            cycle = False
+
+        elif len(v1) > len(v2):
+            v2.append("0")
+
+        elif len(v2) > len(v1):
+            v1.append("0")
+
+    for num in range(len(v1)):
+        if int(v1[num]) < int(v2[num]):
+            return False
+        elif int(v1[num]) > int(v2[num]):
+            return True
+    return True

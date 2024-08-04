@@ -35,3 +35,10 @@ def friend4(s):
     if not s:
         return []
     return [x for x in s if len_meter(x)]
+
+
+# another one
+
+meter = lambda x: len(x) == 4
+
+friend = lambda s: [x for x in s if meter(x)]

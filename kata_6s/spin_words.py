@@ -37,3 +37,19 @@ def spin_words3(sentence):
 
 
 spin_words4 = lambda sentence: ' '.join(map(lambda x: rev2(x), sentence.split()))
+
+# -------------------
+
+len_check = lambda x: len(x) >= 5
+
+
+def rev(x):
+    s = ""
+
+    for char in range(-1, -len(x) - 1, - 1):
+        s += x[char]
+
+    return s
+
+def spin_words4(sentence):
+    return " ".join(rev(x) if len_check(x) else x for x in sentence.split())
