@@ -37,10 +37,10 @@ def human_years_cat_years_dog_years(hy):
 
 
 def human_years_cat_years_dog_years2(hy):
-    num = [human_years]
+    num = [hy]
     cat = 15
     dog = 15
-    for n in range(1, human_years + 1):
+    for n in range(1, hy + 1):
         if n >= 3:
             cat += 4
             dog += 5

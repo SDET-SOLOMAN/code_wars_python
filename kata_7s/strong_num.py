@@ -52,3 +52,23 @@ from math import factorial
 
 
 strong_num3 = lambda n: ["Not Strong !!", "STRONG!!!!"][n == sum(factorial(int(d)) for d in str(n))]
+
+
+def rolling(s):
+    s = int(s)
+
+    if s == 0:
+        return 1
+
+    n = 1
+
+    for char in range(1, s + 1):
+        n *= char
+
+    return n
+
+
+def strong_num4(number):
+    s = sum([rolling(char) for char in str(number)])
+    print(s)
+    return ['Not Strong !!', "STRONG!!!!"][s == number]

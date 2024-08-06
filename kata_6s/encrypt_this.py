@@ -52,3 +52,10 @@ def encrypt_this4(text):
         i[0] = str(ord(i[0]))
         result.append("".join(i))
     return " ".join(result)
+
+
+# using multiple functions
+
+enc = lambda x: str(ord(x))
+switcher = lambda x: enc(x[0]) + x[-1] + x[2 : -1] + x[1] if len(x) >= 3 else str(enc(x[0])) + x[1:]
+encrypt_this5 = lambda x: " ".join(map(switcher, x.split()))

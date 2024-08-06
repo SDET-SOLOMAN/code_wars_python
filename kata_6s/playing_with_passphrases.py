@@ -145,3 +145,26 @@ al = string.ascii_lowercase + string.ascii_lowercase + string.ascii_uppercase + 
 
 play_pass3 = lambda s, n: ''.join(al[al.index(x) + n].upper() if x.isalpha() and i % 2 == 0 else al[
     al.index(x) + n].lower() if x.isalpha() else str(9 - int(x) if x.isdigit() else x) for i, x in enumerate(s))[::-1]
+
+# using multiple functions
+
+from string import ascii_lowercase
+
+down_up = lambda x, s: x.upper() if s % 2 == 0 else x.lower()
+
+
+def find_index(letter, n):
+    alpha = ascii_lowercase + ascii_lowercase
+    return alpha[alpha.index(letter) + n]
+
+
+get_opposite_num = lambda x: str({0: 9, 1: 8, 2: 7, 3: 6, 4: 5, 5: 4, 6: 3, 7: 2, 8: 1, 9: 0}[int(x)])
+
+
+def play_pass4(s, n):
+    s = s.lower()
+
+    just_letters = "".join(
+        down_up(find_index(letter, n), pos) if letter.isalpha() else letter for pos, letter in enumerate(s))[::-1]
+
+    return "".join(x if not x.isdigit() else get_opposite_num(x) for x in just_letters)

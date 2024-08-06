@@ -17,3 +17,23 @@ def is_anagram(test, original):
 def is_anagram2(test, original):
     test, original = test.lower(), original.lower()
     return sorted(test) == sorted(original)
+
+
+# using dict
+
+def is_anagram3(test, original):
+    test = test.lower()
+    org = original.lower()
+
+    t = {k: test.count(k) for k in test}
+    o = {k: org.count(k) for k in org}
+
+    for k, v in o.items():
+        if not t.get(k) or t[k] != v:
+            return False
+
+    for k, v in t.items():
+        if not o.get(k) or o[k] != v:
+            return False
+
+    return True

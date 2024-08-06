@@ -114,3 +114,29 @@ def hig6h(x):
 # found this solution on codeWars
 def high6(x):
     return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))
+
+
+from string import ascii_lowercase
+
+def word_score(s):
+    n = 0
+    alpha = ascii_lowercase
+    d = {alpha[k]: k + 1 for k in range(len(alpha))}
+
+    for char in s:
+        n += d[char]
+    return n
+
+
+def high7(x):
+    x = x.lower().split()
+    m = ""
+    score = -9999
+    print(x)
+
+    for char in x:
+        temp = word_score(char)
+        if temp > score:
+            score = temp
+            m = char
+    return m

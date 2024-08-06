@@ -29,3 +29,12 @@ def closest_multiple_10_v3(i):
 
 
 closest_multiple_10_ = lambda x: (x // 10) * 10 if x % 10 < 5 else ((x // 10) + 1) * 10
+
+
+def closest_multiple_10_v4(i):
+    n = i // 10
+
+    if i % 10 < 5:
+        return (n) * 10
+
+    return (n + 1) * 10
