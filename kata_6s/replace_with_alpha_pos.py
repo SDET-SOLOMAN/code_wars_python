@@ -18,3 +18,20 @@ def alphabet_position(text):
         return ""
     alpha = string.ascii_lowercase
     return ' '.join(str(alpha.index(x) + 1) for x in text.lower() if x in alpha)
+
+
+from string import ascii_lowercase
+
+alpha = ascii_lowercase
+
+find_letter = lambda x: str(alpha.index(x) + 1)
+
+
+def alphabet_position2(text):
+    text = text.lower().split()
+
+    return " ".join(" ".join(find_letter(x) for x in s if x.isalpha()) for s in text)
+
+# found this ord solutions
+def alphabet_position3(text):
+    return ' '.join(str(ord(c) - 96) for c in text.lower() if c.isalpha())

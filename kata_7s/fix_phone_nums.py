@@ -22,3 +22,14 @@ def is_it_a_num(s: str) -> str:
         return "Not a phone number"
     num = ''.join(x for x in s if x.isdigit())
     return "Not a phone number" if len(num) != 11 or num[0] != '0' else num
+
+
+def is_it_a_num2(s: str) -> str:
+    text = "Not a phone number"
+
+    if "0" not in s:
+        return text
+
+    fixed = "".join(x for x in s if x.isdigit())
+
+    return [text, fixed][len(fixed) == 11 and fixed[0] == "0"]
