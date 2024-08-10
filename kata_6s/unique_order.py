@@ -34,3 +34,8 @@ def unique_in_order(sequence):
         new.append(sequence[-1])
 
     return new
+
+
+# comprehenssion:
+def unique_in_order2(s):
+    return [x for i, x in enumerate(s) if i == 0 or s[i - 1] != x]
