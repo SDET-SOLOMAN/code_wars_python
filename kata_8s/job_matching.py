@@ -27,3 +27,6 @@ def job_matching(candidate, job):
     if not candidate['min_salary'] or not job['max_salary']:
         return False
     return job['max_salary'] >= (candidate['min_salary'] * .9)
+
+
+job_matching2 = lambda candidate, job: candidate['min_salary'] * 0.9 <= job['max_salary']

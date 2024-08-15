@@ -9,3 +9,7 @@
 
 def say_hello(name, city, state):
     return f"Hello, {' '.join(x for x in name)}! Welcome to {city}, {state}!"
+
+
+def say_hello2(name, city, state):
+    return "Hello, {}! Welcome to {}, {}!".format(" ".join(name), city, state)

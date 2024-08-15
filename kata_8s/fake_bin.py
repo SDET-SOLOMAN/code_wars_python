@@ -5,3 +5,7 @@
 
 def fake_bin(x):
     return ''.join("0" if int(num) < 5 else "1" for num in x)
+
+
+def fake_bin2(n):
+    return "".join(map(lambda x: "0" if int(x) < 5 else "1", n))

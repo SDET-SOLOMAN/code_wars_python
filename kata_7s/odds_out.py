@@ -23,3 +23,7 @@
 
 def odd_ones_out(numbers):
     return [x for x in numbers if numbers.count(x) % 2 == 0]
+
+
+def odd_ones_ou2t(numbers):
+    return list(filter(lambda x: numbers.count(x) % 2 == 0, numbers))
