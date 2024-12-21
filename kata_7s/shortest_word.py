@@ -40,3 +40,19 @@ def find_short5(s):
 
 
 find_short6 = lambda words: len(sorted(words.split(), key=len)[0])
+find_short8 = lambda words: sorted(map(len, s.split()))[0]
+
+
+def find_short7(s):
+    if not s:
+        return 0
+
+    s = s.split()
+    min_w = len(s[0])
+
+    for char in s[1:]:
+        new_w = len(char)
+        if new_w < min_w:
+            min_w = new_w
+
+    return min_w

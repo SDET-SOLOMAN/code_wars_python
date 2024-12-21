@@ -25,3 +25,5 @@ def solution3(st):
         s += st[num]
 
     return s
+
+solution4 = lambda s: "".join(s[num] for num in range(len(s) -1, -1, -1))

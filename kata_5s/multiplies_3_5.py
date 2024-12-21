@@ -25,3 +25,10 @@ def solution3(number):
             my_sum += num
 
     return my_sum
+
+
+from functools import reduce
+def solution4(number):
+    num = list(filter(lambda x: x % 3 == 0 or x % 5 == 0, range(number)))
+
+    return reduce(lambda x, y: x + y, num) if len(num) >= 2 else 0

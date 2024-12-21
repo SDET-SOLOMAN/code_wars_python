@@ -41,3 +41,25 @@ def sum_two_smallest_numbers3(numbers):
 
     return my_min + my_min2
 
+
+def looping(num):
+    x = num[0]
+
+    for char in num:
+        if char < x:
+            x = char
+    return x
+
+
+def sum_two_smallest_numbers4(numbers):
+    n = sorted(numbers)
+
+    min1 = looping(n)
+    n.remove(min1)
+    min2 = looping(n)
+
+    return min1 + min2
+
+
+def sum_two_smallest_numbers5(numbers):
+    return sum(sorted(numbers)[:2])

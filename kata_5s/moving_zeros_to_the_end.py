@@ -51,3 +51,11 @@ def move_zeros6(lst):
 move_zeros7 = lambda lst: sorted(lst, key=lambda x: x == 0)
 
 move_zeros8 = lambda x: [num for num in x if num != 0] + [zero for zero in x if zero == 0]
+
+
+def move_zeros9(lst):
+    no_zeros = []
+    zeros = []
+    [no_zeros.append(x) if x != 0 else zeros.append(0) for x in lst]
+    no_zeros.extend(zeros)
+    return no_zeros

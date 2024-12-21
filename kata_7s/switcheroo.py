@@ -31,3 +31,17 @@ def switcheroo3(s):
 
 def switcheroo4(s):
     return s.replace("a", "1").replace("b", "2").replace('1', "b").replace("2", "a")
+
+
+def swi(x):
+    match x.lower():
+        case "b":
+            return "a"
+        case "a":
+            return "b"
+        case _:
+            return x
+
+def switcheroo5(s):
+    return "".join(swi(x) for x in s)
+

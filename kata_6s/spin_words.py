@@ -51,5 +51,15 @@ def rev(x):
 
     return s
 
+
 def spin_words4(sentence):
     return " ".join(rev(x) if len_check(x) else x for x in sentence.split())
+
+
+is_it = lambda x: len(x) > 4
+rev2 = lambda x: x[::-1]
+
+
+def spin_words5(sentence):
+    # Your code goes here
+    return " ".join(rev2(x) if is_it(x) else x for x in sentence.split())

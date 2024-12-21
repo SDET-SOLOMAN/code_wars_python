@@ -1,11 +1,35 @@
-employee_count = int (input("How many employees worked this week? "))
-print()
-days = [x for x in range(1, 6)]
+example = "ce32jvnfjnvffg4..4rf33fr3.4"
+nums = []
+temp = ''
 
-#pay overview:
-hourly_wage = 8.50
-overtime_hourly_pay = 12.75
+for i, char in enumerate(example):
+    print(temp, nums)
+    if char.isdigit():
+        temp += char
+    elif char == '.' and "." not in temp:
+        temp += char
+    else:
+        if temp:
+            nums.append(temp)
+        temp = ''
+    if i == len(example) - 1 and temp:
+        nums.append(temp)
 
-for num in range(1, employee_count + 1):
-    hours = sum([int(input(f"How many hours did Employee {num} work on day {day}? ")) for day in days])
-    print(f"Employee {num} worked {hours} and earned ${(hours * hourly_wage if hours <= 40 else (40 * hourly_wage + (hours - 40) * overtime_hourly_pay))} this week")
+total = sum(int(x) if "." not in x else float(x) for x in nums)
+print(total)
+
+def sum_of_numbers(string):
+    total_sum = 0
+    number = ''
+    for char in string:
+        if char.isdigit() or (char == '.'):
+            number += char
+        else:
+            if number:
+                total_sum += float(number)
+                number = ''
+    if number:
+        total_sum += float(number)
+
+    return total_sum
+print(sum_of_numbers(example))

@@ -16,6 +16,7 @@
 
 def compare_versions(ver1, ver2):
     return [int(i) for i in ver1.split(".")] >= [int(i) for i in ver2.split(".")]
+    # return list(map(int, v1.split("."))) >= list(map(int, v2.split(".")))
 
 
 def compare_versions2(version1, version2):

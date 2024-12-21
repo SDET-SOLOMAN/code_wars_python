@@ -38,5 +38,4 @@ def first_non_consecutive2(arr):
 
 def first_non_consecutive3(arr):
     s = [arr[i + 1] for i, x in enumerate(arr[:-1]) if x + 1 != arr[i + 1]]
-
     return s[0] if s else None
