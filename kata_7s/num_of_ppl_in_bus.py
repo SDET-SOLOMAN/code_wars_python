@@ -25,3 +25,9 @@ def number(bus_stops):
 
 def number2(bus_stops):
     return sum([ppl[0] - ppl[1] for ppl in bus_stops])
+
+
+from functools import reduce
+
+def number3(bs):
+    return reduce(lambda total, y: total + y[0] - y[1], bs, 0)

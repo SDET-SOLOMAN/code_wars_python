@@ -45,3 +45,11 @@ def swi(x):
 def switcheroo5(s):
     return "".join(swi(x) for x in s)
 
+
+def switcheroo6(s):
+    x = {
+        "a": "b",
+        "b": "a"
+    }
+
+    return "".join(x.get(l, l) for l in s)
