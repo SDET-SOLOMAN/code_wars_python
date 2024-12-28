@@ -24,3 +24,7 @@ def update_light2(current):
             return "yellow"
         case "yellow":
             return "red"
+
+
+def update_light3(current):
+    return {"green": "yellow", "yellow": "red", "red": "green"}[current]

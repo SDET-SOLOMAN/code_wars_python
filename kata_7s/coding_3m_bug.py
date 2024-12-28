@@ -28,3 +28,6 @@ def sc2(apple):
         for index_2, row_2 in enumerate(row_1):
             if row_2.lower() == 'b':
                 return [index_1, index_2]
+
+
+sc3 = lambda apple: [[index1, char1.index("B")] for index1, char1 in enumerate(apple) if "B" in char1][0]

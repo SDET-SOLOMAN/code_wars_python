@@ -103,3 +103,19 @@ def zero_plentiful3(arr):
             if zc > 0:
                 return 0
     return t
+
+def zero_plentiful4(arr):
+    z = 0
+    total = 0
+
+    for num in arr + [None]:  # Adding a sentinel value to process the final sequence
+        if num == 0:
+            z += 1
+        else:
+            if z and z < 4:  # Invalid sequence of zeros
+                return 0
+            if z >= 4:  # Valid sequence of zeros
+                total += 1
+            z = 0  # Reset count for the next sequence
+
+    return total

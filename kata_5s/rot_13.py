@@ -55,10 +55,30 @@ def rot13_v2(message):
                 my_message += alphabet[nums + tem_index]
     return my_message
 
-    import string
-    def rot13_v3(message):
+import string
 
-        alphabet = string.ascii_lowercase + string.ascii_uppercase
+def rot13_v3(message):
 
-        return ''.join(alphabet[alphabet.index(x.lower()) + 13].lower() if x.isalpha() and x.islower() else alphabet[
+    alphabet = string.ascii_lowercase + string.ascii_uppercase
+
+    return ''.join(alphabet[alphabet.index(x.lower()) + 13].lower() if x.isalpha() and x.islower() else alphabet[
             alphabet.index(x.lower()) + 13].upper() if x.isalpha() and x.isupper() else x for x in message)
+
+
+def rot13_v4(message):
+
+    alpha = list(string.ascii_lowercase + string.ascii_lowercase)
+
+    out = ""
+
+    for char in message:
+        if char.isalpha():
+            temp = alpha[alpha.index(char.lower()) + 13]
+            if char.isupper():
+                out += temp.upper()
+            else:
+                out += temp
+        else:
+            out += char
+
+    return out

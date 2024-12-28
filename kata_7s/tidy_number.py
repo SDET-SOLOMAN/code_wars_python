@@ -54,3 +54,18 @@ def tidyNumber2(n):
         temp = num
 
     return True
+
+
+def tidyNumber7(n):
+    x = n % 10
+
+    while n:
+
+        s = n % 10
+
+        if s > x:
+            return False
+        x = s
+
+        n //= 10
+    return True

@@ -29,3 +29,35 @@ def counting_valleys(s):
         elif char == 'U':
             m += 1
     return t
+
+
+def counting_valleys2(s):
+    x = 0
+    t = 0
+
+    for char in s:
+
+        if char == "U":
+            if x == -1:
+                t += 1
+            x += 1
+
+        elif char == "D":
+            x -= 1
+
+    return t
+
+
+def counting_valleys3(s):
+    step = 0
+    total = 0
+    d = {"U": 1, "D": -1}
+
+    for char in s:
+
+        if d.get(char):
+            if step == -1 and d[char] == 1:
+                total += 1
+            step += d[char]
+
+    return total

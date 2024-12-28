@@ -38,3 +38,9 @@ def explode5(s):
     j = list(map(int, s))
 
     return "".join(x * j[i] for i, x in enumerate(s))
+
+
+boom = lambda x: x * int(x)
+
+def explode6(s):
+    return "".join(map(boom, s))

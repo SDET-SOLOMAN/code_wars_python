@@ -92,3 +92,9 @@ def to_camel_cas5e(text):
             tex.append(temp)
             temp = ""
     return tex[0] + ''.join(x.capitalize() for x in tex[1:])
+
+
+def to_camel_case6(text):
+    text = text.replace("_", "-").replace("-", " ").split()
+
+    return text[0] + ''.join(x.capitalize() for x in text[1:]) if text else ""
