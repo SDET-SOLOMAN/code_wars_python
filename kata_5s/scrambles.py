@@ -46,3 +46,13 @@ def scramble4(s1, s2):
         d[l] -= 1
 
     return True
+
+
+def scramble5(s1, s2):
+    for char in set(s2):
+        if s2.count(char) > s1.count(char):
+            return False
+    return True
+
+
+scramble6 = lambda x, y: all(x.count(s) >= y.count(s) for s in set(y))

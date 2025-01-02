@@ -30,3 +30,21 @@ def unscramble_eggs2(word):
 
 def unscramble_eggs3(word):
     return ''.join(word.replace("egg", ""))
+
+
+def unscramble_eggs(word):
+    e = "egg"
+    i = 0
+    new = ""
+
+    for num in range(len(word)):
+        try:
+            if word[i:i + 3] != e:
+                new += word[i]
+                i += 1
+            else:
+                i += 3
+        except:
+            pass
+
+    return new

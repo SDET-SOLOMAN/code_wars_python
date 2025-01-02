@@ -25,3 +25,7 @@ def get_planet_name(id):
         case 8:
             name = "Neptune"
     return name
+
+
+def get_planet_name2(id):
+    return ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"][id-1]

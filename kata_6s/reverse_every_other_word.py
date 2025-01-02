@@ -24,3 +24,9 @@ reverse_alternate2 = lambda x: ' '.join(s if i % 2 == 0 else s[::-1] for i, s in
 def reverse_alternate3(s):
     s = s.split()
     return ' '.join([x[::-1] if s.index(x) % 2 == 1 else x for x in s])
+
+
+rev = lambda x, i: "".join(x[s] for s in range(-1, -len(x) -1, -1)) if i % 2 == 1 else x
+
+def reverse_alternate4(st):
+    return " ".join(rev(x, i) for i, x in enumerate(st.split()))

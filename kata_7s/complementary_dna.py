@@ -49,3 +49,14 @@ def DNA_strand4(dna):
         "G": "C"
     }
     return ''.join(change[x] if change.get(x) else x for x in dna)
+
+
+def DNA_strand5(dna):
+    d = {
+        "A": "T",
+        "T": "A",
+        "G": "C",
+        "C": "G"
+    }
+
+    return "".join(d.get(x, x) for x in dna)

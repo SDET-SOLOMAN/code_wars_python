@@ -13,14 +13,14 @@ minimum = lambda x: sorted(x)[0]
 maximum = lambda x: max(x)
 
 
-def minimum(arr):
+def minimum1(arr):
     my_num = arr[0]
     for num in arr:
         if num < my_num:
             my_num = num
     return my_num
 
-def maximum(arr):
+def maximum1(arr):
     my_num = arr[0]
     for num in arr:
         if num > my_num:
@@ -31,3 +31,8 @@ def minimum2(arr):
     return sorted(arr)[0]
 def maximum2(arr):
     return sorted(arr)[-1]
+
+
+fixed = lambda x: sorted(x)
+minimum3 = lambda x: fixed(x)[0]
+maximum3 = lambda x: fixed(x)[-1]

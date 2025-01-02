@@ -140,3 +140,11 @@ def high7(x):
             score = temp
             m = char
     return m
+
+
+import string
+
+a = string.ascii_lowercase
+total = lambda x: sum(a.index(c) + 1 for c in x)
+def high8(x):
+    return max(x.split(), key=total)

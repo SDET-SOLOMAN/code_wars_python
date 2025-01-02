@@ -38,3 +38,30 @@ def grabscrab3(said, p):
     s = ''.join(sorted(said))
     p2 = [''.join(sorted(x)) for x in p]
     return [p[i] for i, x in enumerate(p2) if x == s]
+
+
+
+make_d = lambda x: {k: x.count(k) for k in x}
+def grabscrab4(s, p):
+    s = {k: s.count(k) for k in s}
+    p1 = [make_d(x) for x in p]
+    r = []
+
+    for num in range(len(p)):
+
+        check = True
+
+        for k, v in p1[num].items():
+            if k not in s or v != s[k]:
+                check = False
+                break
+
+        for k, v in s.items():
+            if k not in p1[num] or v != p1[num][k]:
+                check = False
+                break
+
+        if check:
+            r.append(p[num])
+
+    return r
