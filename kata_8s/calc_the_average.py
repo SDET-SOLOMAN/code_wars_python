@@ -6,3 +6,10 @@ def find_average(n):
     if not n:
         return 0
     return sum(n) / len(n)
+
+
+def find_average2(n):
+    try:
+        return sum(n) / len(n)
+    except ZeroDivisionError:
+        return 0

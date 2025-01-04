@@ -28,3 +28,7 @@ def sum_array(arr):
     arr.remove(m2)
 
     return sum(arr)
+
+
+def sum_array2(arr):
+    return sum(sorted(arr)[1:-1]) if arr else 0

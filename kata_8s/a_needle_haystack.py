@@ -16,3 +16,8 @@ def find_needle(haystack):
 
 def find_needle2(haystack):
     return f"found the needle at position {haystack.index('needle')}"
+
+
+def find_needle2(h):
+    i = [i for i in range(len(h)) if h[i] == 'needle'][0]
+    return f"found the needle at position {i}"

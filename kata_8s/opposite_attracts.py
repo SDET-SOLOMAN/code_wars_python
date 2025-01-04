@@ -8,3 +8,7 @@
 
 def lovefunc( flower1, flower2 ):
     return (flower1 + flower2) % 2 != 0
+
+
+def lovefunc2(f1, f2 ):
+    return [False, True][(f1 + f2) % 2 != 0]

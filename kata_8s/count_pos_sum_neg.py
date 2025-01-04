@@ -18,3 +18,10 @@ def count_positives_sum_negatives(arr):
     [p.append(ne) if ne > 0 else n.append(ne) for ne in arr]
 
     return [len(p), sum(n)]
+
+
+positives = lambda x: len(list(filter(lambda s: s > 0, x)))
+negatives = lambda x: sum(map(lambda s: s if s < 0 else 0, x))
+
+def count_positives_sum_negatives2(arr):
+    return [positives(arr), negatives(arr)] if arr else []
