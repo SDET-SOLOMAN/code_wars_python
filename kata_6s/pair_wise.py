@@ -39,3 +39,16 @@ def pairwise(arr, n):
                 counting_sums.append(num2)
 
     return sum(counting_sums)
+
+
+def pairwise2(arr, n):
+    c = []
+
+    for i, char in enumerate(arr[:-1]):
+        for j, char2 in enumerate(arr[i + 1:], start=i + 1):
+            if i in c or j in c:
+                continue
+            if char + char2 == n:
+                c.append(i)
+                c.append(j)
+    return sum(c)

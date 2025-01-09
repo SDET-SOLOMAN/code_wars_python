@@ -19,4 +19,8 @@ def replace_dashes_as_one(s):
         return replace_dashes_as_one(a)
     return a
 
-[9].ind
+
+def replace_dashes_as_one2(a):
+    while '--' in a or '- -' in a or '-  -' in a:
+        a = a.replace('--', '-').replace('- -', '-').replace('-  -', '-')
+    return a

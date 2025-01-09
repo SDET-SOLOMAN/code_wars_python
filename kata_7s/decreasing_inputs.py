@@ -17,3 +17,9 @@
 
 def add(*args):
     return round(sum(x / (i + 1) for i, x in enumerate(args)))
+
+
+def add2(*args):
+    if not args:
+        return 0
+    return round(sum(x / i for i, x in enumerate(args, 1)))

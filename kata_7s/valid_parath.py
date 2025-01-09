@@ -42,3 +42,18 @@ def valid_parentheses3(x):
     while "()" in x:
         x = x.replace("()", "")
     return x == ""
+
+
+def valid_parentheses4(p):
+    l = []
+    for char in p:
+        if char == "(":
+            l.append(char)
+        else:
+            try:
+                l.pop()
+            except:
+                return False
+    if not l:
+        return True
+    return False

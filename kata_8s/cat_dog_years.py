@@ -50,3 +50,10 @@ def human_years_cat_years_dog_years2(hy):
     num.append(cat)
     num.append(dog)
     return num
+
+
+cat = lambda x: 15 if x == 1 else 24 if cat == 2 else 24 + ((x - 2) * 4)
+dog = lambda x: 15 if x == 1 else 24 if cat == 2 else 24 + ((x - 2) * 5)
+def human_years_cat_years_dog_years4(h):
+    # Your code here
+    return [h, cat(h), dog(h)]

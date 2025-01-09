@@ -42,3 +42,18 @@ def yoga(classroom, poses):
                 if (x + sum(char)) >= s:
                     ss += 1
     return ss
+
+
+def yoga2(c, p):
+
+    x = 0
+    m = len(p)
+
+    for char in c:
+        for c in char:
+            num = 0
+            while num < m:
+                if (sum(char) + c) >= p[num]:
+                    x += 1
+                num += 1
+    return x

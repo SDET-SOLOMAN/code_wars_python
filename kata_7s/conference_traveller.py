@@ -32,3 +32,12 @@ def conference_picker(cv, co):
     s = [x for x in co if x not in cv]
     print(s)
     return 'No worthwhile conferences this year!' if not s else s[0]
+
+
+def conference_picker2(cv, co):
+    nope = 'No worthwhile conferences this year!'
+
+    if all(cv.count(x) == co.count(x) for x in set(co)):
+        return nope
+
+    return "".join([x for x in co if x not in cv][0])

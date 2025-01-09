@@ -38,3 +38,21 @@ def greatest_distance2(arr):
 # found this solut on solutions
 def greatest_distance3(arr):
     return max(i - arr.index(x) for i, x in enumerate(arr))
+
+
+def greatest_distance4(arr):
+
+    d = {}
+
+    for i, char in enumerate(arr):
+        if char not in d:
+            d[char] = [i, i]
+        else:
+            d[char][1] = i
+
+    m = 0
+
+    for k, v in d.items():
+        if v[1] - v[0] > m:
+            m = v[1] - v[0]
+    return m
