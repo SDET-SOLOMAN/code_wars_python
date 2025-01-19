@@ -26,3 +26,20 @@ def remove_smallest(numbers):
     if len(copy) > 0:
         copy.remove(min(copy))
     return copy
+
+
+def remove_smallest(n):
+
+    try:
+        m = n[0]
+
+        for num in n:
+            if num < m:
+                m = num
+        x = n.copy()
+        x.remove(m)
+
+        return x
+
+    except:
+        return []

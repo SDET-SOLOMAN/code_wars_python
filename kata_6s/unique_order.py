@@ -39,3 +39,14 @@ def unique_in_order(sequence):
 # comprehenssion:
 def unique_in_order2(s):
     return [x for i, x in enumerate(s) if i == 0 or s[i - 1] != x]
+
+
+def unique_in_order3(s):
+    x = []
+
+    for char in s:
+        if char and not x:
+            x.append(char)
+        elif x[-1] != char:
+            x.append(char)
+    return x

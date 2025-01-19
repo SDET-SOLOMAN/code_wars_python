@@ -32,3 +32,19 @@ def is_valid_walk(walk):
 
 
 is_valid_walk2 = lambda x: len(x) == 10 and x.count('n') == x.count('s') and x.count('e') == x.count('w')
+
+
+def is_valid_walk3(w):
+    len_w = len(w)
+
+    if len_w > 10 or len_w < 10:
+        return False
+
+    d = {k: w.count(k) for k in w}
+
+    for k, v in d.items():
+
+        if d.get("n") != d.get("s") or d.get("w") != d.get("e"):
+            return False
+
+    return True

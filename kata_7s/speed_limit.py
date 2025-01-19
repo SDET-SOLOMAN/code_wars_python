@@ -37,3 +37,17 @@ def speed_limit2(speed, signals):
         elif speed - char >= 10:
             m += 100
     return m
+
+
+def cost(s, limit):
+    total = limit - s
+    match total:
+        case total if total < 10:
+            return 0
+        case total if total < 20:
+            return 100
+        case total if total < 30:
+            return 250
+        case _:
+            return 500
+speed_limit3 = lambda speed, signals: sum(cost(x, speed) for x in signals)
