@@ -5,3 +5,8 @@
 
 def div_con(s):
     return sum(num if type(num) == int else -int(num) for num in s)
+
+
+s = lambda x: -abs(int(x))
+def div_con2(x):
+    return sum(s(num) if type(num) == str else num for num in x)

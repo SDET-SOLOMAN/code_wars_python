@@ -13,3 +13,4 @@ def count2(string):
     for char in string:
         c[char] = c.get(char, 0) + 1
     return c
+
