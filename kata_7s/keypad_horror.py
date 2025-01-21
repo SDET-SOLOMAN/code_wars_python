@@ -42,3 +42,10 @@ def computer_to_phone(numbers):
 
 def computer_to_phone2(numbers):
   return "".join([str({0:0, 1:7, 2:8, 3:9, 4:4, 5:5, 6:6, 7:1, 8:2, 9:3}[int(n)]) for n in numbers])
+
+
+def computer_to_phone3(n):
+    n = list(map(int, n))
+    h, l = [7, 8, 9], [1, 2, 3]
+
+    return "".join(map(str, [x - 6 if x in h else x + 6 if x in l else x for x in n]))

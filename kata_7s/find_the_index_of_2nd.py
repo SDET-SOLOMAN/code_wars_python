@@ -20,3 +20,23 @@ def second_symbol2(s, x):
     if not s or s.count(x) <= 1:
         return -1
     return s.find(x, s.find(x) + 1)
+
+
+def second_symbol3(s, symbol):
+    try:
+        x = s.index(symbol)
+
+        x2 = s.index(symbol, x + 1)
+
+        return x2
+
+    except:
+        return -1
+
+
+def second_symbol4(s, symbol):
+    x = s.find(symbol)
+
+    x2 = s.find(symbol, x + 1)
+
+    return x2

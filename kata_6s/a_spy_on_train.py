@@ -60,3 +60,52 @@ def length_of_railway(sounds):
                 counter += t10
 
     return counter
+
+
+def length_of_railway2(sounds):
+    speed = False
+    multi = 10
+    m = 0
+
+    s = sounds.split("呜呜呜")
+
+    for char in s:
+        x = char.count("哐当")
+        m += (x * multi)
+        if not speed:
+            speed = True
+            multi = 20
+        else:
+            speed = False
+            multi = 10
+    return m
+
+
+def length_of_railway3(s):
+    s = s.replace("呜呜呜", "a").replace("哐当", "b")
+    total = 0
+    num = 10
+    for char in s:
+        if char == "a":
+            num = 20 if num == 10 else 10
+        if char == "b":
+            total += num
+    return total
+
+
+def length_of_railway4(s):
+    speed = False
+    number = 10
+    total = 0
+
+    train = "呜呜呜"
+    distance = "哐当"
+
+    for i, char in enumerate(s):
+
+        if s[i:i + 3] == train:
+            speed = True if not speed else False
+        if s[i:i + 2] == distance:
+            number = 20 if speed else 10
+            total += number
+    return total

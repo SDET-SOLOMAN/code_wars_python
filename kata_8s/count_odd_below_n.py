@@ -8,3 +8,7 @@
 
 def odd_count(n):
     return len(range(1, n, 2))
+
+
+def odd_count2(n):
+    return sum(1 for x in range(1, n, 2))

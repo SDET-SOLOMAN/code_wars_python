@@ -10,3 +10,6 @@ def no_odds(values):
 
 def no_odds2(values):
     return [i for i in values if i % 2 == 0]
+
+
+no_odds3 = lambda v: list(filter(lambda x: x % 2 == 0, v))

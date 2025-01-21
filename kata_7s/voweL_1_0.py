@@ -24,3 +24,13 @@ def vowel_one2(s):
 def vowel_one3(s):
     s = s.lower()
     return ''.join(map(lambda x: ["0", "1"][x in "aioue"], s))
+
+
+in_it = lambda x: x.lower() in "auioue"
+def vowel_one4(s):
+    d = {
+        True: "1",
+        False: "0"
+    }
+    return "".join(d[in_it(x)] for x in s)
+    # return "".join(["0", "1"][in_it(x)] for x in s)

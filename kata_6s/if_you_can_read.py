@@ -39,3 +39,6 @@ def to_nato3(words: str) -> str:
     a = " ".join(alpha[x] if x.isalpha() else x for x in words)
 
     return " ".join(x for x in a.split(" ") if len(x) > 0)
+
+
+to_nato2 = lambda words: ' '.join(alpha.get(x.upper(), x) for x in words if x != " ")

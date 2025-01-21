@@ -27,3 +27,19 @@ def determine_time(arr):
     m //= 60
     s //= 60
     return (h + m + s) <= 24
+
+
+def determine_time2(arr):
+    t = [0, 0, 0]
+
+    for char in arr:
+        char = char.split(":")
+        h2, m2, s2 = map(int, char)
+        t[0] += h2
+        t[1] += m2
+        t[2] += s2
+
+    t[1] //= 60
+    t[2] //= 60
+
+    return sum(t) <= 24
