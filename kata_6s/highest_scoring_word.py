@@ -122,7 +122,6 @@ def word_score(s):
     n = 0
     alpha = ascii_lowercase
     d = {alpha[k]: k + 1 for k in range(len(alpha))}
-
     for char in s:
         n += d[char]
     return n
@@ -132,8 +131,6 @@ def high7(x):
     x = x.lower().split()
     m = ""
     score = -9999
-    print(x)
-
     for char in x:
         temp = word_score(char)
         if temp > score:
@@ -143,8 +140,18 @@ def high7(x):
 
 
 import string
-
 a = string.ascii_lowercase
 total = lambda x: sum(a.index(c) + 1 for c in x)
 def high8(x):
     return max(x.split(), key=total)
+
+
+word = lambda char: sum(ord(x) - 96 for x in char)
+def high9(x):
+    x = x.split()
+    re = ("", 0)
+    for char in x:
+        temp = word(char)
+        if temp > re[-1]:
+            re = (char, temp)
+    return re[0]

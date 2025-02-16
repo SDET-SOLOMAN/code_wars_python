@@ -41,5 +41,9 @@ def count_smileys2(arr):
 
 
 smiles = [':D', ':~)', ';~D', ':)', ';-D', ";)", ";D", ':-D']
-
 count_smileys3 = lambda faces: len(list(filter(lambda x: x in smiles, faces)))
+
+
+def count_smileys4(arr):
+    faces = [':D',':~)',';~D',':)', ';-D', ";)", ";D", ':-D' ]
+    return sum(1 for x in arr if x in faces)

@@ -60,3 +60,19 @@ def DNA_strand5(dna):
     }
 
     return "".join(d.get(x, x) for x in dna)
+
+
+def dna(x):
+    match x:
+        case "A":
+            return "T"
+        case "T":
+            return "A"
+        case "G":
+            return "C"
+        case "C":
+            return "G"
+        case _:
+            return x
+def DNA_strand6(x):
+    return "".join(map(dna, x))

@@ -21,3 +21,7 @@ def solution2(s):
         else:
             new_s += n
     return new_s
+
+
+def solution3(s):
+    return "".join(x if x.islower() else f" {x}" for x in s)
