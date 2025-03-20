@@ -12,8 +12,8 @@
 def parse(data):
 
     num = 0
-
     my_list = []
+
     for char in data:
         if char == 'i':
             num += 1
@@ -27,3 +27,37 @@ def parse(data):
     return my_list
 
 print(parse("iiisdoso"))
+
+
+def parse2(data):
+    num = 0
+    myArr = []
+
+    def incriment():
+        nonlocal num
+        num += 1
+
+    def minus():
+        nonlocal num
+        num -= 1
+
+    def multi():
+        nonlocal num
+        num *= num
+
+    def app():
+        myArr.append(num)
+
+    commands = {
+        'i': incriment,
+        'd': minus,
+        's': multi,
+        'o': app
+    }
+
+    for char in data:
+        action = commands.get(char)
+        if action:
+            action()
+
+    return myArr
