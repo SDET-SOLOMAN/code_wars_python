@@ -1,5 +1,10 @@
-from functools import reduce
+def multi(x, y):
+    return x * y
 
-l = [1, 2, 3, 4]
-map, filter, reduce
-print(reduce(lambda x, y: x - y, l))
+
+def another(x, y):
+    b = multi(x, y)
+
+    return b + b
+
+print(another(5, 5))
