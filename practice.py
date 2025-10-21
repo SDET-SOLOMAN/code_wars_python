@@ -1,35 +1,38 @@
-example = "ce32jvnfjnvffg4..4rf33fr3.4"
-nums = []
-temp = ''
+from random import choice, randint
+from turtle import Turtle, Screen
 
-for i, char in enumerate(example):
-    print(temp, nums)
-    if char.isdigit():
-        temp += char
-    elif char == '.' and "." not in temp:
-        temp += char
-    else:
-        if temp:
-            nums.append(temp)
-        temp = ''
-    if i == len(example) - 1 and temp:
-        nums.append(temp)
+screen = Screen()
+screen.setup(width=700, height=600)
+user_input = screen.textinput("Turtle race bet", 'Which turtle will win this race, make your bet: ')
 
-total = sum(int(x) if "." not in x else float(x) for x in nums)
-print(total)
 
-def sum_of_numbers(string):
-    total_sum = 0
-    number = ''
-    for char in string:
-        if char.isdigit() or (char == '.'):
-            number += char
-        else:
-            if number:
-                total_sum += float(number)
-                number = ''
-    if number:
-        total_sum += float(number)
+def create_turtles(height, num_turtle):
+    race_turtles = []
+    number = - (height // num_turtle)
+    colors = ['blue', 'red', 'pink', 'yellow', 'orange', 'black']
+    for num in range(num_turtle):
+        temp = Turtle('turtle')
+        temp.color(colors[num])
+        temp.penup()
+        temp.setposition(-340, number)
+        number += 50
+        race_turtles.append(temp)
+    return race_turtles
 
-    return total_sum
-print(sum_of_numbers(example))
+
+turtles = create_turtles(700, 6)
+
+winner = ""
+game = True
+while game:
+    for race_turtle in turtles:
+        distance = randint(0, 20)
+        race_turtle.forward(distance)
+        if race_turtle.xcor() > 300:
+            game = False
+            winner = race_turtle.color()[0]
+            break
+print(f"The winner is {winner}")
+if user_input.lower() == winner:
+    print("You are winner!!!")
+screen.exitonclick()
